@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+}
+
+
+/* Navbar */
+
+.navbar {
+    height: 70px;
+    background: #2563eb;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* Main */
+
+.message-container {
+    width: 90%;
+    max-width: 1200px;
+
+    height: 80vh;
+
+    margin: 30px auto;
+
+    background: white;
+
+    display: flex;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Alumni List */
+
+.alumni-list {
+    width: 32%;
+
+    border-right: 1px solid #ddd;
+
+    background: #ffffff;
+}
+
+.list-header {
+    padding: 20px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.list-header h2 {
+    color: #1f2937;
+}
+
+.search-user {
+    padding: 15px;
+}
+
+.search-user input {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    outline: none;
+}
+
+
+/* User */
+
+.user {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    cursor: pointer;
+
+    border-bottom: 1px solid #eee;
+}
+
+.user:hover {
+    background: #f1f5f9;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.user-info h3 {
+    font-size: 16px;
+}
+
+.user-info p {
+    color: #777;
+
+    font-size: 13px;
+
+    margin-top: 4px;
+}
+
+
+/* Chat */
+
+.chat-area {
+    width: 68%;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.chat-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 20px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-header h2 {
+    font-size: 18px;
+}
+
+.chat-header p {
+    color: green;
+
+    font-size: 13px;
+
+    margin-top: 4px;
+}
+
+
+/* Messages */
+
+.messages {
+    flex: 1;
+
+    padding: 20px;
+
+    overflow-y: auto;
+
+    background: #f8fafc;
+}
+
+.message {
+    max-width: 65%;
+
+    padding: 10px 14px;
+
+    margin-bottom: 12px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+}
+
+.message p {
+    margin-bottom: 5px;
+}
+
+.message span {
+    font-size: 11px;
+
+    color: #777;
+}
+
+.message.sent {
+    margin-left: auto;
+
+    background: #2563eb;
+
+    color: white;
+
+    border-bottom-right-radius: 2px;
+}
+
+.message.sent span {
+    color: #e5e7eb;
+}
+
+.message.received {
+    margin-right: auto;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-bottom-left-radius: 2px;
+}
+
+
+/* Input */
+
+.message-input {
+    display: flex;
+
+    padding: 15px;
+
+    border-top: 1px solid #ddd;
+
+    gap: 10px;
+}
+
+.message-input input {
+    flex: 1;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    outline: none;
+}
+
+.message-input button {
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.message-input button:hover {
+    background: #1d4ed8;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .message-container {
+        width: 100%;
+
+        height: calc(100vh - 100px);
+
+        margin: 15px 0;
+    }
+
+    .alumni-list {
+        width: 35%;
+    }
+
+    .chat-area {
+        width: 65%;
+    }
+
+    .user-info {
+        display: none;
+    }
+
+    .message {
+        max-width: 85%;
+    }
+
+}
+
+/* ================= ALUMNI LIST SCROLL ================= */
+
+.alumni-list {
+    height: calc(100vh - 80px);
+    max-height: calc(100vh - 80px);
+    overflow-y: auto !important;
+    overflow-x: hidden;
+}
+
+#userList {
+    height: auto;
+    overflow: visible;
+}
+
+/* Scrollbar */
+.alumni-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.alumni-list::-webkit-scrollbar-thumb {
+    background: #2196f3;
+    border-radius: 10px;
+}
+
+.alumni-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}

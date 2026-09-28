@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Institute - Prestige College</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+        .inner-page {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 40px 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .inner-page h1 {
+            font-size: 38px;
+            color: #123f9c;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .inner-page .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 17px;
+            margin-bottom: 35px;
+            font-style: italic;
+        }
+
+        /* ================= COLLEGE IMAGE WITH LIGHTING ================= */
+
+        .college-banner {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            border-radius: 16px;
+            overflow: hidden;
+
+            box-shadow:
+                0 0 25px rgba(37, 99, 235, 0.45),
+                0 0 50px rgba(37, 99, 235, 0.25),
+                0 15px 40px rgba(0, 0, 0, 0.25);
+
+            transition: all 0.4s ease;
+        }
+
+        .college-banner:hover {
+            box-shadow:
+                0 0 35px rgba(37, 99, 235, 0.7),
+                0 0 70px rgba(37, 99, 235, 0.4),
+                0 20px 50px rgba(0, 0, 0, 0.3);
+
+            transform: translateY(-5px);
+        }
+
+        .college-banner img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .college-banner:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Light glow overlay */
+
+        .college-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background: linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.25) 0%,
+                rgba(255, 255, 255, 0) 40%,
+                rgba(255, 255, 255, 0) 60%,
+                rgba(37, 99, 235, 0.25) 100%
+            );
+
+            pointer-events: none;
+            z-index: 2;
+
+            transition: opacity 0.4s ease;
+        }
+
+        .college-banner:hover::before {
+            background: linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.4) 0%,
+                rgba(255, 255, 255, 0) 40%,
+                rgba(255, 255, 255, 0) 60%,
+                rgba(37, 99, 235, 0.4) 100%
+            );
+        }
+
+        /* Light beam sweep animation */
+
+        .college-banner::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -60%;
+
+            width: 40%;
+            height: 200%;
+
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.5),
+                transparent
+            );
+
+            transform: skewX(-25deg);
+
+            z-index: 3;
+            pointer-events: none;
+
+            animation: lightSweep 3s infinite;
+        }
+
+        @keyframes lightSweep {
+            0% {
+                left: -60%;
+            }
+
+            100% {
+                left: 130%;
+            }
+        }
+
+        .college-banner:hover::after {
+            animation: lightSweep 1.5s infinite;
+        }
+
+        /* ================= CONTENT ================= */
+
+        .inner-page h2 {
+            font-size: 26px;
+            color: #3025c9;
+            margin-top: 35px;
+            margin-bottom: 15px;
+
+            border-left: 5px solid #3025c9;
+            padding-left: 15px;
+        }
+
+        .inner-page p {
+            font-size: 16px;
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+
+        .inner-page ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        .inner-page ul li {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .inner-page .highlight-box {
+            background: #eef4ff;
+            border-left: 5px solid #2563eb;
+
+            padding: 20px 25px;
+
+            border-radius: 8px;
+
+            margin: 25px 0;
+        }
+
+        .inner-page .highlight-box p {
+            margin: 0;
+            font-size: 16px;
+            color: #123f9c;
+            font-weight: 500;
+        }
+
+        .back-btn {
+            display: inline-block;
+
+            margin-top: 30px;
+
+            padding: 12px 25px;
+
+            background: #2563eb;
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 7px;
+
+            font-size: 15px;
+
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #1d4ed8;
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 8px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        @media (max-width: 768px) {
+
+            .inner-page {
+                margin: 20px 15px;
+                padding: 25px 20px;
+            }
+
+            .inner-page h1 {
+                font-size: 28px;
+            }
+
+            .inner-page h2 {
+                font-size: 21px;
+            }
+
+            .college-banner img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="college-brand">
+
+            <img
+                src="/images/college.png.jpg"
+                alt="College Logo"
+                class="college-image"
+            >
+
+            <span class="college-name">
+                PRESTIGE COLLEGE
+            </span>
+
+        </div>
+
+
+        <nav class="main-nav">
+
+            <div class="nav-links">
+
+                <!-- ABOUT US -->
+
+                <div class="dropdown">
+
+                    <a href="/" class="dropbtn">
+                        ABOUT US
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="/about">
+                            About Institute
+                        </a>
+
+                        <a href="/vision">
+                            Vision and Mission
+                        </a>
+
+                        <a href="/chairman">
+                            Chairman
+                        </a>
+
+                        <a href="/director">
+                            Director
+                        </a>
+
+                        <a href="/faculty">
+                            Faculty
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div class="dropdown">
+
+                    <a href="/#message" class="dropbtn">
+                        MESSAGE
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="/message/alumni">
+                            Alumni
+                        </a>
+
+                        <a href="/message/student">
+                            Student
+                        </a>
+
+                        <a href="/message/other">
+                            Other
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACADEMICS -->
+
+                <div class="dropdown">
+
+                    <a href="/#academics" class="dropbtn">
+                        ACADEMICS
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="/#academics">
+                            Programs
+                        </a>
+
+                        <a href="/#academics">
+                            Departments
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div class="dropdown">
+
+                    <a href="/#contact" class="dropbtn">
+                        CONTACT US
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="/#contact">
+                            Enquiry
+                        </a>
+
+                        <a href="/#contact">
+                            Address
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH -->
+
+            <div class="nav-search">
+
+                <input
+                    type="text"
+                    id="navSearch"
+                    placeholder="Search..."
+                >
+
+                <button onclick="searchWebsite()">
+                    🔍
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <!-- LOGIN BUTTONS -->
+
+        <div class="nav-buttons">
+
+            <button onclick="openLogin()">
+                Login
+            </button>
+
+            <button
+                class="join-btn"
+                onclick="openRegister()"
+            >
+                Join Network
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= ABOUT INSTITUTE CONTENT ================= -->
+
+    <section class="inner-page">
+
+        <h1>
+            About Prestige Institute of Management and Research
+        </h1>
+
+        <p class="subtitle">
+            "Building Leaders, Empowering Futures"
+        </p>
+
+
+        <!-- COLLEGE IMAGE -->
+
+        <div class="college-banner">
+
+            <img
+                src="/images/home.png.jpeg"
+                alt="Prestige College Campus"
+            >
+
+        </div>
+
+
+        <!-- OUR INSTITUTE -->
+
+        <h2>
+            Our Institute
+        </h2>
+
+        <p>
+            Prestige Institute of Management and Research (PIMR), Bhopal,
+            is one of the leading educational institutions in Central India,
+            dedicated to providing quality education in the fields of
+            Management, Commerce, and Technology. Established with a vision
+            to nurture future leaders, the institute has consistently
+            maintained high academic standards and a strong commitment to
+            holistic development.
+        </p>
+
+        <p>
+            PIMR is affiliated with Barkatullah University, Bhopal, and
+            approved by AICTE. The institute offers a wide range of
+            undergraduate and postgraduate programs designed to meet the
+            evolving needs of the industry and society.
+        </p>
+
+
+        <!-- HIGHLIGHT -->
+
+        <div class="highlight-box">
+
+            <p>
+                🎓 Over 30+ years of academic excellence and thousands of
+                successful alumni worldwide.
+            </p>
+
+        </div>
+
+
+        <!-- WHY CHOOSE PIMR -->
+
+        <h2>
+            Why Choose PIMR?
+        </h2>
+
+        <ul>
+
+            <li>
+                Experienced and dedicated faculty members.
+            </li>
+
+            <li>
+                State-of-the-art infrastructure and modern classrooms.
+            </li>
+
+            <li>
+                Strong industry connections and placement support.
+            </li>
+
+            <li>
+                Vibrant campus life with cultural and sports activities.
+            </li>
+
+            <li>
+                Active alumni network across the globe.
+            </li>
+
+        </ul>
+
+
+        <!-- CAMPUS -->
+
+        <h2>
+            Our Campus
+        </h2>
+
+        <p>
+            The PIMR campus is spread across a sprawling green area on
+            Kokta Bypass Road, Bhopal. It features modern lecture halls,
+            well-equipped computer labs, a rich library, seminar halls,
+            sports facilities, and a peaceful environment conducive to
+            learning and growth.
+        </p>
+
+
+        <!-- ACHIEVEMENTS -->
+
+        <h2>
+            Our Achievements
+        </h2>
+
+        <ul>
+
+            <li>
+                Ranked among the top management institutes in Madhya Pradesh.
+            </li>
+
+            <li>
+                Consistently high placement records with top recruiters.
+            </li>
+
+            <li>
+                Numerous national and international research publications.
+            </li>
+
+            <li>
+                Strong alumni presence in leading companies worldwide.
+            </li>
+
+        </ul>
+
+
+        <!-- BACK BUTTON -->
+
+        <a href="/" class="back-btn">
+            ← Back to Home
+        </a>
+
+    </section>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="/js/script-new.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alumni Connect Portal</title>
+
+    <!-- Node.js public folder se CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="authentication-required">
+
+    <!-- ================= TOP BAR ================= -->
+
+    <div class="top-bar">
+
+        <div class="top-bar-left">
+
+            <a href="tel:+917553511700" class="top-contact">
+                <span class="icon">📞</span> +91 755 351 1700
+            </a>
+
+            <a href="mailto:info@pimrbhopal.ac.in" class="top-contact">
+                <span class="icon">✉️</span> info@pimrbhopal.ac.in
+            </a>
+
+        </div>
+
+        <div class="top-bar-center">
+
+            <span>
+                Admissions / Registrations 2026
+                &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+                Admissions / Registrations 2026
+                &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+                Admissions / Registrations 2026
+            </span>
+
+        </div>
+
+        <div class="top-bar-right">
+
+            <a href="#" class="top-btn examination-btn">
+                Exam
+            </a>
+
+            <a href="#" class="top-btn erp-btn">
+                SIS Login
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="college-brand">
+
+            <img
+                src="/images/college.png.jpg"
+                alt="College Logo"
+                class="college-image"
+            >
+
+            <span class="college-name">
+                PRESTIGE COLLEGE
+            </span>
+
+        </div>
+
+
+        <nav class="main-nav">
+
+            <div class="nav-links">
+
+                <!-- ABOUT US -->
+
+                <div class="dropdown">
+
+                    <a href="/about" class="dropbtn">
+                        ABOUT US <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="/about">
+                            About Institute
+                        </a>
+
+                        <a href="/vision">
+                            Vision and Mission
+                        </a>
+
+                        <a href="/chairman">
+                            Chairman
+                        </a>
+
+                        <a href="/director">
+                            Director
+                        </a>
+
+                        <a href="/faculty">
+                            Faculty
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    class="dropdown"
+                    onmouseover="showDropdown(this)"
+                    onmouseout="hideDropdown(this)"
+                >
+
+                    <a href="#message" class="dropbtn">
+                        MESSAGE <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="/message/alumni">
+                            Alumni
+                        </a>
+
+                        <a href="/message/student">
+                            Student
+                        </a>
+
+                        <a href="/message/other">
+                            Other
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACADEMICS -->
+
+                <div
+                    class="dropdown"
+                    onmouseover="showDropdown(this)"
+                    onmouseout="hideDropdown(this)"
+                >
+
+                    <a href="#academics" class="dropbtn">
+                        ACADEMICS <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="#academics">
+                            Programs Offered
+                        </a>
+
+                        <a href="#academics">
+                            Departments
+                        </a>
+
+                        <a href="#academics">
+                            Academic Calendar
+                        </a>
+
+                        <a href="#academics">
+                            Syllabus
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESEARCH -->
+
+                <div
+                    class="dropdown"
+                    onmouseover="showDropdown(this)"
+                    onmouseout="hideDropdown(this)"
+                >
+
+                    <a href="#research" class="dropbtn">
+                        RESEARCH <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="#research">
+                            Research Areas
+                        </a>
+
+                        <a href="#research">
+                            Publications
+                        </a>
+
+                        <a href="#research">
+                            Projects
+                        </a>
+
+                        <a href="#research">
+                            Collaborations
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PEOPLE -->
+
+                <div
+                    class="dropdown"
+                    onmouseover="showDropdown(this)"
+                    onmouseout="hideDropdown(this)"
+                >
+
+                    <a href="#people" class="dropbtn">
+                        PEOPLE <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="#people">
+                            Faculty Members
+                        </a>
+
+                        <a href="#people">
+                            Staff
+                        </a>
+
+                        <a href="#people">
+                            Alumni Achievers
+                        </a>
+
+                        <a href="#people">
+                            Student Leaders
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STUDENTS -->
+
+                <div
+                    class="dropdown"
+                    onmouseover="showDropdown(this)"
+                    onmouseout="hideDropdown(this)"
+                >
+
+                    <a href="#students" class="dropbtn">
+                        STUDENTS <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="#students">
+                            Current Students
+                        </a>
+
+                        <a href="#students">
+                            Student Clubs
+                        </a>
+
+                        <a href="#students">
+                            Scholarships
+                        </a>
+
+                        <a href="#students">
+                            Hostel & Facilities
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ADMISSIONS -->
+
+                <div
+                    class="dropdown"
+                    onmouseover="showDropdown(this)"
+                    onmouseout="hideDropdown(this)"
+                >
+
+                    <a href="#admissions" class="dropbtn">
+                        ADMISSIONS <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="#admissions">
+                            Admission Procedure
+                        </a>
+
+                        <a href="#admissions">
+                            Eligibility Criteria
+                        </a>
+
+                        <a href="#admissions">
+                            Fee Structure
+                        </a>
+
+                        <a href="#admissions">
+                            Apply Online
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- INFRASTRUCTURE -->
+
+                <div
+                    class="dropdown"
+                    onmouseover="showDropdown(this)"
+                    onmouseout="hideDropdown(this)"
+                >
+
+                    <a href="#infrastructure" class="dropbtn">
+                        INFRASTRUCTURE <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="#infrastructure">
+                            Campus
+                        </a>
+
+                        <a href="#infrastructure">
+                            Library
+                        </a>
+
+                        <a href="#infrastructure">
+                            Labs
+                        </a>
+
+                        <a href="#infrastructure">
+                            Sports Facilities
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PLACEMENTS -->
+
+                <div
+                    class="dropdown"
+                    onmouseover="showDropdown(this)"
+                    onmouseout="hideDropdown(this)"
+                >
+
+                    <a href="#placements" class="dropbtn">
+                        PLACEMENTS <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="#placements">
+                            Placed Students
+                        </a>
+
+                        <a href="#placements">
+                            Recruiters
+                        </a>
+
+                        <a href="#placements">
+                            Placement Statistics
+                        </a>
+
+                        <a href="#placements">
+                            Training & Placement Cell
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CAREERS -->
+
+                <div
+                    class="dropdown"
+                    onmouseover="showDropdown(this)"
+                    onmouseout="hideDropdown(this)"
+                >
+
+                    <a href="#careers" class="dropbtn">
+                        CAREERS <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="#careers">
+                            Job Opportunities
+                        </a>
+
+                        <a href="#careers">
+                            Internships
+                        </a>
+
+                        <a href="#careers">
+                            Alumni Referrals
+                        </a>
+
+                        <a href="#careers">
+                            Career Guidance
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTACT US -->
+
+                <div
+                    class="dropdown"
+                    onmouseover="showDropdown(this)"
+                    onmouseout="hideDropdown(this)"
+                >
+
+                    <a href="#contact" class="dropbtn">
+                        CONTACT US <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="#contact">
+                            Enquiry Form
+                        </a>
+
+                        <a href="#contact">
+                            Address
+                        </a>
+
+                        <a href="#contact">
+                            Phone & Email
+                        </a>
+
+                        <a href="#contact">
+                            Location Map
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="nav-search">
+
+                <input
+                    type="text"
+                    id="navSearch"
+                    placeholder="Search..."
+                >
+
+                <button onclick="searchWebsite()">
+                    🔍
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <div class="nav-buttons">
+
+            <button onclick="openLogin()">
+                Login
+            </button>
+
+            <button
+                class="join-btn"
+                onclick="openRegister()"
+            >
+                Join Network
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+
+                Connect With Your
+
+                <span>
+                    Alumni Community
+                </span>
+
+            </h1>
+
+            <p>
+
+                Build professional connections, share experiences,
+                discover career opportunities and stay connected
+                with your college alumni network.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <button onclick="openRegister()">
+                    Join Alumni Network
+                </button>
+
+                <button
+                    class="outline-btn"
+                    onclick="scrollToSection('alumni')"
+                >
+                    Explore Alumni
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PIMR ================= -->
+
+    <section class="pimr-section" id="pimr">
+
+        <div class="pimr-image">
+
+            <img
+                src="/images/home.png.jpeg"
+                alt="PIMR College Students"
+            >
+
+        </div>
+
+
+        <div class="pimr-content">
+
+            <h1>
+                PIMR College
+            </h1>
+
+            <h2>
+                Built by Students. Connected by Alumni.
+            </h2>
+
+            <p>
+                Alumni Connect Portal is a digital platform
+                designed to connect students, alumni and the
+                college community on one platform.
+            </p>
+
+            <p>
+                Through this platform, students can connect
+                with alumni, discover career opportunities,
+                share experiences and build professional
+                relationships.
+            </p>
+
+            <p>
+                Our goal is to create a strong and active
+                alumni community where students and alumni
+                can stay connected with PIMR College.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DIRECTOR MESSAGE ================= -->
+
+    <section class="director-section" id="message">
+
+        <div class="director-image">
+
+            <img
+                src="/images/director.png.jpeg"
+                alt="Director Sir"
+            >
+
+        </div>
+
+
+        <div class="director-content">
+
+            <span class="director-label">
+                DIRECTOR'S MESSAGE
+            </span>
+
+            <h1>
+                Director Sir
+            </h1>
+
+            <h2>
+                Guiding Students Towards a Successful Future
+            </h2>
+
+            <p>
+                It is my pleasure to welcome you to the Alumni
+                Connect Portal of PIMR College. Our institution
+                believes that education is not limited to the
+                classroom, but continues through meaningful
+                relationships and lifelong learning.
+            </p>
+
+            <p>
+                Our alumni are an important part of our college
+                community. Their achievements, experiences and
+                professional journeys inspire our students and
+                help them build a better future.
+            </p>
+
+            <p>
+                Through Alumni Connect, we aim to strengthen the
+                bond between our students, alumni and institution
+                and create opportunities for networking, mentorship
+                and collaboration.
+            </p>
+
+
+            <div class="director-signature">
+
+                <strong>
+                    Director
+                </strong>
+
+                <span>
+                    PIMR College
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PLACEMENTS ================= -->
+
+    <section
+        id="placements"
+        class="placements-section"
+    >
+
+        <h1>
+            Our Placed Students
+        </h1>
+
+        <div class="placement-slider">
+
+            <button
+                class="placement-btn left-btn"
+                onclick="prevPlacement()"
+            >
+                ‹
+            </button>
+
+
+            <div
+                class="placement-track"
+                id="placementTrack"
+            >
+
+                <img
+                    src="/images/placement1.png.jpeg"
+                    class="placement-card"
+                >
+
+                <img
+                    src="/images/placement2.png.jpeg"
+                    class="placement-card"
+                >
+
+                <img
+                    src="/images/placement3.png.jpeg"
+                    class="placement-card"
+                >
+
+                <img
+                    src="/images/placement4.png.jpeg"
+                    class="placement-card"
+                >
+
+                <img
+                    src="/images/placement5.png.jpeg"
+                    class="placement-card"
+                >
+
+            </div>
+
+
+            <button
+                class="placement-btn right-btn"
+                onclick="nextPlacement()"
+            >
+                ›
+            </button>
+
+        </div>
+
+        <h3>
+            PIMR College
+        </h3>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="section" id="about">
+
+        <div class="section-title">
+
+            <h2>
+                About Alumni Connect
+            </h2>
+
+            <p>
+                A digital platform connecting students, alumni
+                and institutions.
+            </p>
+
+        </div>
+
+
+        <div class="about-container">
+
+            <div class="about-card">
+
+                <div class="icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Alumni Network
+                </h3>
+
+                <p>
+                    Connect with alumni from different batches,
+                    departments and locations.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="icon">
+                    💼
+                </div>
+
+                <h3>
+                    Career Opportunities
+                </h3>
+
+                <p>
+                    Discover jobs, internships and professional
+                    opportunities shared by alumni.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="icon">
+                    🤝
+                </div>
+
+                <h3>
+                    Professional Connections
+                </h3>
+
+                <p>
+                    Build meaningful professional relationships
+                    and grow your network.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ALUMNI ================= -->
+
+    <section
+        class="section alumni-section"
+        id="alumni"
+    >
+
+        <div class="section-title">
+
+            <h2>
+                Alumni Directory
+            </h2>
+
+            <p>
+                Find and connect with our alumni.
+            </p>
+
+        </div>
+
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search alumni..."
+            >
+
+        </div>
+
+
+        <div
+            class="alumni-container"
+            id="alumniContainer"
+        >
+
+            <!-- Alumni 1 -->
+
+            <div class="alumni-card">
+
+                <div class="profile">
+                    RK
+                </div>
+
+                <h3>
+                    Raja Kumar
+                </h3>
+
+                <p>
+                    Web Developer
+                </p>
+
+                <span>
+                    ICT INfo
+                </span>
+
+                <button onclick="connectAlumni('Raja Kumar')">
+                    Connect
+                </button>
+
+                <button
+                    onclick="window.location.href='/messages?user=Raja%20Kumar'"
+                >
+                    Message
+                </button>
+
+            </div>
+
+
+            <!-- Alumni 2 -->
+
+            <div class="alumni-card">
+
+                <div class="profile">
+                    AS
+                </div>
+
+                <h3>
+                    Manish Gupta
+                </h3>
+
+                <p>
+                    Software Engineer
+                </p>
+
+                <span>
+                    Google
+                </span>
+
+                <button
+                    onclick="connectAlumni('Ayush Sharma')"
+                >
+                    Connect
+                </button>
+
+                <button
+                    onclick="openMessage('Ayush Sharma')"
+                >
+                    Message
+                </button>
+
+            </div>
+
+
+            <!-- Alumni 3 -->
+
+            <div class="alumni-card">
+
+                <div class="profile">
+                    PS
+                </div>
+
+                <h3>
+                    Anand Kumar
+                </h3>
+
+                <p>
+                    Data Analyst
+                </p>
+
+                <span>
+                    Microsoft
+                </span>
+
+                <button
+                    onclick="connectAlumni('Priya Singh')"
+                >
+                    Connect
+                </button>
+
+                <button
+                    onclick="openMessage('Priya Singh')"
+                >
+                    Message
+                </button>
+
+            </div>
+
+
+            <!-- Alumni 4 -->
+
+            <div class="alumni-card">
+
+                <div class="profile">
+                    AM
+                </div>
+
+                <h3>
+                    Manish Ranjan
+                </h3>
+
+                <p>
+                    Java Developer
+                </p>
+
+                <span>
+                    TCS
+                </span>
+
+                <button
+                    onclick="connectAlumni('Amit Mishra')"
+                >
+                    Connect
+                </button>
+
+                <button
+                    onclick="openMessage('Priya Singh')"
+                >
+                    Message
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EVENTS ================= -->
+
+    <section
+        class="section"
+        id="events"
+    >
+
+        <div class="section-title">
+
+            <h2>
+                Upcoming Events
+            </h2>
+
+            <p>
+                Participate in alumni events and activities.
+            </p>
+
+        </div>
+
+
+        <div class="event-container">
+
+            <div class="event-card">
+
+                <div class="date">
+
+                    <strong>
+                        15
+                    </strong>
+
+                    <small>
+                        OCT
+                    </small>
+
+                </div>
+
+
+                <div class="event-content">
+
+                    <h3>
+                        Annual Alumni Meet
+                    </h3>
+
+                    <p>
+                        📍 College Auditorium
+                    </p>
+
+                    <p>
+                        Meet old classmates and build new
+                        professional connections.
+                    </p>
+
+                    <button
+                        onclick="registerEvent('Annual Alumni Meet')"
+                    >
+                        Register
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="event-card">
+
+                <div class="date">
+
+                    <strong>
+                        22
+                    </strong>
+
+                    <small>
+                        OCT
+                    </small>
+
+                </div>
+
+
+                <div class="event-content">
+
+                    <h3>
+                        Career Guidance Session
+                    </h3>
+
+                    <p>
+                        📍 Seminar Hall
+                    </p>
+
+                    <p>
+                        Learn career strategies from experienced
+                        alumni.
+                    </p>
+
+                    <button
+                        onclick="registerEvent('Career Guidance Session')"
+                    >
+                        Register
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= JOBS ================= -->
+
+    <section
+        class="section jobs-section"
+        id="jobs"
+    >
+
+        <div class="section-title">
+
+            <h2>
+                Jobs & Opportunities
+            </h2>
+
+            <p>
+                Explore career opportunities from our network.
+            </p>
+
+        </div>
+
+
+        <div class="job-container">
+
+            <div class="job-card">
+
+                <h3>
+                    Frontend Developer
+                </h3>
+
+                <p>
+                    🏢 ABC Technologies
+                </p>
+
+                <p>
+                    📍 Bangalore
+                </p>
+
+                <p>
+                    💼 Full Time
+                </p>
+
+                <button
+                    onclick="applyJob('Frontend Developer')"
+                >
+                    Apply Now
+                </button>
+
+            </div>
+
+
+            <div class="job-card">
+
+                <h3>
+                    Java Developer
+                </h3>
+
+                <p>
+                    🏢 XYZ Solutions
+                </p>
+
+                <p>
+                    📍 Pune
+                </p>
+
+                <p>
+                    💼 Full Time
+                </p>
+
+                <button
+                    onclick="applyJob('Java Developer')"
+                >
+                    Apply Now
+                </button>
+
+            </div>
+
+
+            <div class="job-card">
+
+                <h3>
+                    Web Development Intern
+                </h3>
+
+                <p>
+                    🏢 Tech Solutions
+                </p>
+
+                <p>
+                    📍 Remote
+                </p>
+
+                <p>
+                    💼 Internship
+                </p>
+
+                <button
+                    onclick="applyJob('Web Development Intern')"
+                >
+                    Apply Now
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section
+        class="section contact-section"
+        id="contact"
+    >
+
+        <div class="section-title">
+
+            <h2>
+                Contact Us
+            </h2>
+
+            <p>
+                Have a question? Send us a message.
+            </p>
+
+        </div>
+
+
+        <form id="contactForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <textarea
+                id="contactMessage"
+                placeholder="Enter your message"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="main-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-institute">
+
+                <div class="institute-card">
+
+                    <div class="institute-logo">
+
+                        <img
+                            src="/images/college.png.jpg"
+                            alt="Prestige College"
+                        >
+
+                    </div>
+
+                    <h2>
+                        Prestige Institute of<br>
+                        Management and<br>
+                        Research,
+                    </h2>
+
+
+                    <div class="footer-social">
+
+                        <a href="#" aria-label="Facebook">
+                            f
+                        </a>
+
+                        <a href="#" aria-label="LinkedIn">
+                            in
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            ◎
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Admission
+                </h3>
+
+                <div class="footer-line"></div>
+
+                <a href="#admissions">
+                    ◉ &nbsp; Program offered
+                </a>
+
+                <a href="#admissions">
+                    ◉ &nbsp; Admission procedure
+                </a>
+
+                <a href="#admissions">
+                    ◉ &nbsp; Eligibility
+                </a>
+
+                <a href="#admissions">
+                    ◉ &nbsp; Documents Required
+                </a>
+
+                <a href="#admissions">
+                    ◉ &nbsp; Refund Policy
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    About us
+                </h3>
+
+                <div class="footer-line"></div>
+
+                <a href="#about">
+                    ◉ &nbsp; About Institute
+                </a>
+
+                <a href="#about">
+                    ◉ &nbsp; Vision and mission
+                </a>
+
+                <a href="#about">
+                    ◉ &nbsp; Chairman
+                </a>
+
+                <a href="#message">
+                    ◉ &nbsp; Director
+                </a>
+
+                <a href="#people">
+                    ◉ &nbsp; Faculty
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Important links
+                </h3>
+
+                <div class="footer-line"></div>
+
+                <a href="#">
+                    ◉ &nbsp; Mandatory Disclosure
+                </a>
+
+                <a href="#infrastructure">
+                    ◉ &nbsp; Facilities
+                </a>
+
+                <a href="#events">
+                    ◉ &nbsp; Blog
+                </a>
+
+                <a href="#alumni">
+                    ◉ &nbsp; Alumni
+                </a>
+
+                <a href="#">
+                    ◉ &nbsp; Privacy Policy
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= CONTACT ROW ================= -->
+
+        <div class="footer-contact-container">
+
+            <div class="footer-contact-box">
+
+                <div class="contact-icon">
+                    ♧
+                </div>
+
+                <div>
+
+                    <h4>
+                        Address
+                    </h4>
+
+                    <p>
+                        Bhopal, Kokta Bypass Road,
+                        MP-462022
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-contact-box">
+
+                <div class="contact-icon">
+                    ♧
+                </div>
+
+                <div>
+
+                    <h4>
+                        Admission Contacts
+                    </h4>
+
+                    <p>
+                        +91 7880161303,
+                        +91 9826172562
+                    </p>
+
+                    <h4 class="contact-sub-title">
+                        Admission Email :
+                    </h4>
+
+                    <p>
+                        info@pimrbhopal.ac.in<br>
+                        admissionhead@pimrbhopal.ac.in
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-contact-box">
+
+                <div class="contact-icon">
+                    ♧
+                </div>
+
+                <div>
+
+                    <h4>
+                        Call us for more details
+                    </h4>
+
+                    <p>
+                        +91 755 351 1700
+                    </p>
+
+                    <h4 class="contact-sub-title">
+                        Email us
+                    </h4>
+
+                    <p>
+                        Prestigebhoal2@gmail.com
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= COPYRIGHT ================= -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © PIMR All right reserved 2026 |
+                Design &amp; Developed - Dev Solutions kmr.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= LOGIN MODAL ================= -->
+
+    <div
+        class="modal"
+        id="loginModal"
+    >
+
+        <div class="modal-box">
+
+            <span
+                class="close"
+                onclick="closeLogin()"
+            >
+                &times;
+            </span>
+
+            <h2>
+                Login
+            </h2>
+
+
+            <form id="loginForm">
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Email"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Password"
+                    required
+                >
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+
+            <p>
+
+                Don't have an account?
+
+                <span onclick="switchToRegister()">
+                    Register
+                </span>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= REGISTER MODAL ================= -->
+
+    <div
+        class="modal"
+        id="registerModal"
+    >
+
+        <div class="modal-box">
+
+            <span
+                class="close"
+                onclick="closeRegister()"
+            >
+                &times;
+            </span>
+
+            <h2>
+                Create Account
+            </h2>
+
+
+            <form id="registerForm">
+
+                <input
+                    type="text"
+                    id="registerName"
+                    placeholder="Full Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="Email"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="Password"
+                    required
+                >
+
+
+                <select id="registerRole">
+
+                    <option value="">
+                        Select Role
+                    </option>
+
+                    <option value="Alumni">
+                        Alumni
+                    </option>
+
+                    <option value="Student">
+                        Student
+                    </option>
+
+                </select>
+
+
+                <button type="submit">
+                    Create Account
+                </button>
+
+            </form>
+
+
+            <p>
+
+                Already have an account?
+
+                <span onclick="switchToLogin()">
+                    Login
+                </span>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="/js/script-new.js"></script>
+
+
+    <!-- ================= RIGHT SIDE FIXED BUTTONS ================= -->
+
+    <div class="right-fixed-buttons">
+
+        <a
+            href="#admissions"
+            class="fixed-btn admission-btn"
+        >
+            📢
+            <span>
+                Admission 2026
+            </span>
+        </a>
+
+
+        <a
+            href="#contact"
+            class="fixed-btn enquiry-btn"
+        >
+            📞
+            <span>
+                Enquiry Form
+            </span>
+        </a>
+
+
+        <a
+            href="#contact"
+            class="fixed-btn contact-btn"
+        >
+            <span>
+                Contact Us
+            </span>
+        </a>
+
+
+        <a
+            href="#events"
+            class="fixed-btn events-btn"
+        >
+            📢
+            <span>
+                Events
+            </span>
+        </a>
+
+    </div>
+
+</body>
+
+</html>

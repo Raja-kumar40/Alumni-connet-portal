@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chairman - Prestige College</title>
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+        .inner-page {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 40px 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .inner-page h1 {
+            font-size: 38px;
+            color: #123f9c;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .inner-page .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 17px;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        /* ================= FULL-WIDTH IMAGE WITH LIGHTING ================= */
+
+        .chairman-image-block {
+            position: relative;
+            width: 100%;
+            margin: 35px 0 30px;
+            border-radius: 16px;
+            overflow: hidden;
+
+            box-shadow:
+                0 0 25px rgba(37, 99, 235, 0.45),
+                0 0 50px rgba(37, 99, 235, 0.25),
+                0 15px 40px rgba(0, 0, 0, 0.25);
+
+            transition: all 0.4s ease;
+        }
+
+        .chairman-image-block:hover {
+            box-shadow:
+                0 0 35px rgba(37, 99, 235, 0.75),
+                0 0 70px rgba(37, 99, 235, 0.4),
+                0 20px 50px rgba(0, 0, 0, 0.3);
+
+            transform: translateY(-5px);
+        }
+
+        .chairman-image-block img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .chairman-image-block:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Light sweep animation */
+
+        .chairman-image-block::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 40%;
+            height: 200%;
+
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.55),
+                transparent
+            );
+
+            transform: skewX(-25deg);
+            z-index: 3;
+            pointer-events: none;
+
+            animation: lightSweep 4s infinite;
+        }
+
+        @keyframes lightSweep {
+            0% {
+                left: -60%;
+            }
+
+            100% {
+                left: 130%;
+            }
+        }
+
+        /* Caption overlay */
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+
+            padding: 20px 25px;
+
+            background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.85),
+                rgba(0, 0, 0, 0)
+            );
+
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+
+            z-index: 4;
+
+            text-align: left;
+            letter-spacing: 0.5px;
+        }
+
+        .image-caption span {
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            color: #dbeafe;
+            margin-top: 4px;
+            letter-spacing: 0.3px;
+        }
+
+        /* ================= CONTENT ================= */
+
+        .content-section {
+            margin-bottom: 45px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .content-section:last-of-type {
+            border-bottom: none;
+        }
+
+        .content-section h2 {
+            font-size: 26px;
+            color: #123f9c;
+            margin-bottom: 15px;
+
+            border-left: 5px solid #2563eb;
+
+            padding-left: 15px;
+
+            line-height: 1.3;
+        }
+
+        .content-section p {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 15px;
+            text-align: justify;
+            line-height: 1.85;
+        }
+
+        .content-section ul {
+            margin-left: 25px;
+            margin-top: 12px;
+        }
+
+        .content-section ul li {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background: #eef4ff;
+            border-left: 5px solid #2563eb;
+            padding: 20px 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: #123f9c;
+            font-weight: 500;
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        .signature-box {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+            text-align: right;
+        }
+
+        .signature-box strong {
+            font-size: 20px;
+            color: #123f9c;
+            display: block;
+        }
+
+        .signature-box span {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            margin-top: 3px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        @media (max-width: 768px) {
+
+            .inner-page {
+                margin: 20px 15px;
+                padding: 25px 20px;
+            }
+
+            .inner-page h1 {
+                font-size: 28px;
+            }
+
+            .content-section h2 {
+                font-size: 21px;
+            }
+
+            .chairman-image-block img {
+                height: 300px;
+            }
+
+            .image-caption {
+                font-size: 16px;
+                padding: 14px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="college-brand">
+
+            <img
+                src="/images/college.png.jpg"
+                alt="College Logo"
+                class="college-image"
+            >
+
+            <span class="college-name">
+                PRESTIGE COLLEGE
+            </span>
+
+        </div>
+
+
+        <nav class="main-nav">
+
+            <div class="nav-links">
+
+                <!-- ABOUT US -->
+
+                <div class="dropdown">
+
+                    <a href="/about" class="dropbtn">
+                        ABOUT US
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="/about">
+                            About Institute
+                        </a>
+
+                        <a href="/vision">
+                            Vision and Mission
+                        </a>
+
+                        <a href="/chairman">
+                            Chairman
+                        </a>
+
+                        <a href="/director">
+                            Director
+                        </a>
+
+                        <a href="/faculty">
+                            Faculty
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div class="dropdown">
+
+                    <a href="/#message" class="dropbtn">
+                        MESSAGE
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="/message/alumni">
+                            Alumni
+                        </a>
+
+                        <a href="/message/student">
+                            Student
+                        </a>
+
+                        <a href="/message/other">
+                            Other
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACADEMICS -->
+
+                <div class="dropdown">
+
+                    <a href="/#academics" class="dropbtn">
+                        ACADEMICS
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="/#academics">
+                            Programs
+                        </a>
+
+                        <a href="/#academics">
+                            Departments
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div class="dropdown">
+
+                    <a href="/#contact" class="dropbtn">
+                        CONTACT US
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="/#contact">
+                            Enquiry
+                        </a>
+
+                        <a href="/#contact">
+                            Address
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH -->
+
+            <div class="nav-search">
+
+                <input
+                    type="text"
+                    id="navSearch"
+                    placeholder="Search..."
+                >
+
+                <button onclick="searchWebsite()">
+                    🔍
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <!-- LOGIN BUTTONS -->
+
+        <div class="nav-buttons">
+
+            <button onclick="openLogin()">
+                Login
+            </button>
+
+            <button
+                class="join-btn"
+                onclick="openRegister()"
+            >
+                Join Network
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= CHAIRMAN CONTENT ================= -->
+
+    <section class="inner-page">
+
+        <h1>
+            Chairman's Message
+        </h1>
+
+        <p class="subtitle">
+            "Leading with Vision, Building with Values"
+        </p>
+
+
+        <!-- ================= IMAGE 1 ================= -->
+
+        <div class="chairman-image-block">
+
+            <img
+                src="/images/chairman1.png.jpeg"
+                alt="Chairman - Prestige College"
+            >
+
+            <div class="image-caption">
+
+                Chairman Sir
+
+                <span>
+                    Prestige Institute of Management and Research, Bhopal
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= VISIONARY LEADER ================= -->
+
+        <div class="content-section">
+
+            <h2>
+                A Visionary Leader
+            </h2>
+
+            <p>
+                Our Chairman Sir is a visionary leader whose dedication and commitment have
+                shaped Prestige Institute of Management and Research into one of the most
+                respected educational institutions in Central India. With decades of experience
+                in the field of education and administration, he has been the guiding force
+                behind the institute's remarkable growth and success.
+            </p>
+
+            <p>
+                His unwavering belief in the power of education to transform lives has inspired
+                thousands of students to dream big and achieve their goals. Under his dynamic
+                leadership, PIMR has consistently set new benchmarks in academic excellence,
+                research, and holistic development.
+            </p>
+
+
+            <div class="highlight-box">
+
+                <p>
+                    "Education is not just about degrees — it is about building character,
+                    courage, and compassion."
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= IMAGE 2 ================= -->
+
+        <div class="chairman-image-block">
+
+            <img
+                src="/images/chairman2.png.jpeg"
+                alt="Chairman - Prestige College"
+            >
+
+            <div class="image-caption">
+
+                Chairman Sir with Students
+
+                <span>
+                    Inspiring the next generation of leaders
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= MENTOR ================= -->
+
+        <div class="content-section">
+
+            <h2>
+                A Mentor and Guide
+            </h2>
+
+            <p>
+                Beyond his role as an administrator, our Chairman Sir is a true mentor to
+                students, faculty, and staff alike. He firmly believes that every student has
+                the potential to become a leader, and he continuously works to create an
+                environment where that potential can flourish.
+            </p>
+
+            <p>
+                His regular interactions with students, his encouragement of innovative ideas,
+                and his emphasis on ethical values have made him one of the most respected
+                figures in the education community. He leads by example and inspires everyone
+                around him to give their best.
+            </p>
+
+        </div>
+
+
+        <!-- ================= KEY CONTRIBUTIONS ================= -->
+
+        <div class="content-section">
+
+            <h2>
+                Key Contributions
+            </h2>
+
+            <ul>
+
+                <li>
+                    Established PIMR as a center of excellence in management education.
+                </li>
+
+                <li>
+                    Introduced modern infrastructure and industry-oriented programs.
+                </li>
+
+                <li>
+                    Promoted research, innovation, and entrepreneurship among students.
+                </li>
+
+                <li>
+                    Built a strong alumni network that supports the growth of the institution.
+                </li>
+
+                <li>
+                    Fostered a culture of ethical leadership and social responsibility.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- ================= MESSAGE ================= -->
+
+        <div class="content-section">
+
+            <h2>
+                Message to Students & Alumni
+            </h2>
+
+            <p>
+                Our Chairman Sir always reminds students and alumni that success is not just
+                measured by personal achievements, but by the positive impact we create in
+                the lives of others. He encourages everyone to stay connected with their alma
+                mater, to give back to society, and to be ambassadors of the values that PIMR
+                stands for.
+            </p>
+
+
+            <div class="highlight-box">
+
+                <p>
+                    🌟 "Stay rooted in your values, aim high, and never stop learning."
+                    — Chairman Sir
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= SIGNATURE ================= -->
+
+        <div class="signature-box">
+
+            <strong>
+                Chairman
+            </strong>
+
+            <span>
+                Prestige Institute of Management and Research, Bhopal
+            </span>
+
+        </div>
+
+
+        <!-- ================= BACK BUTTON ================= -->
+
+        <a href="/" class="back-btn">
+            ← Back to Home
+        </a>
+
+    </section>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="/js/script-new.js"></script>
+
+</body>
+</html>

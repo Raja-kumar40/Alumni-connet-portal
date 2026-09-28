@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Alumni Messages</title>
+
+    <!-- Node.js public CSS path -->
+    <link rel="stylesheet"
+          href="/css/messages.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <img
+            src="/images/logo.png"
+            alt="Logo"
+        >
+
+        <span>
+            Alumni Connect
+        </span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="/#alumni">
+            Alumni
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= MESSAGE CONTAINER ================= -->
+
+<main class="message-container">
+
+
+    <!-- ================= LEFT SIDE ================= -->
+
+    <aside class="alumni-list">
+
+
+        <div class="list-header">
+
+            <h2>
+                Messages
+            </h2>
+
+        </div>
+
+
+
+        <!-- ================= SEARCH ================= -->
+
+        <div class="search-user">
+
+            <input
+                type="text"
+                id="userSearch"
+                placeholder="Search alumni..."
+            >
+
+        </div>
+
+
+
+        <!-- ================= 15 ALUMNI ================= -->
+
+        <div id="userList">
+
+
+            <!-- 1. AYUSH -->
+
+            <div
+                class="user"
+                data-name="Ayush Sharma"
+                onclick="openChat('Ayush Sharma')"
+            >
+
+                <div class="avatar">
+                    AS
+                </div>
+
+                <div class="user-info">
+
+                    <h3>
+                        Ayush Sharma
+                    </h3>
+
+                    <p>
+                        Software Engineer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 2. PRIYA -->
+
+            <div
+                class="user"
+                data-name="Priya Singh"
+                onclick="openChat('Priya Singh')"
+            >
+
+                <div class="avatar">
+                    PS
+                </div>
+
+                <div class="user-info">
+
+                    <h3>
+                        Priya Singh
+                    </h3>
+
+                    <p>
+                        Data Analyst
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 3. AMIT -->
+
+            <div
+                class="user"
+                data-name="Amit Mishra"
+                onclick="openChat('Amit Mishra')"
+            >
+
+                <div class="avatar">
+                    AM
+                </div>
+
+                <div class="user-info">
+
+                    <h3>
+                        Amit Mishra
+                    </h3>
+
+                    <p>
+                        Java Developer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 4. ROHIT -->
+
+            <div
+                class="user"
+                data-name="Rohit Kumar"
+                onclick="openChat('Rohit Kumar')"
+            >
+
+                <div class="avatar">
+                    RK
+                </div>
+
+                <div class="user-info">
+
+                    <h3>
+                        Rohit Kumar
+                    </h3>
+
+                    <p>
+                        Full Stack Developer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 5. NEHA -->
+
+            <div
+                class="user"
+                data-name="Neha Verma"
+                onclick="openChat('Neha Verma')"
+            >
+
+                <div class="avatar">
+                    NV
+                </div>
+
+                <div class="user-info">
+
+                    <h3>
+                        Neha Verma
+                    </h3>
+
+                    <p>
+                        HR Manager
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 6. ARJUN -->
+
+            <div
+                class="user"
+                data-name="Arjun Singh"
+                onclick="openChat('Arjun Singh')"
+            >
+
+                <div class="avatar">
+                    AS
+                </div>
+
+                <div class="user-info">
+
+                    <h3>
+                        Arjun Singh
+                    </h3>
+
+                    <p>
+                        Backend Developer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 7. SIMRAN -->
+
+            <div
+                class="user"
+                data-name="Simran Sharma"
+                onclick="openChat('Simran Sharma')"
+            >
+
+                <div class="avatar">
+                    SS
+                </div>
+
+                <div class="user-info">
+
+                    <h3>
+                        Simran Sharma
+                    </h3>
+
+                    <p>
+                        UI UX Designer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 8. VIKAS -->
+
+            <div
+                class="user"
+                data-name="Vikas Yadav"
+                onclick="openChat('Vikas Yadav')"
+            >
+
+                <div class="avatar">
+                    VY
+                </div>
+
+                <div class="user-info">
+
+                    <h3>
+                        Vikas Yadav
+                    </h3>
+
+                    <p>
+                        Cloud Engineer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 9. POOJA -->
+
+            <div
+                class="user"
+                data-name="Pooja Gupta"
+                onclick="openChat('Pooja Gupta')"
+            >
+
+                <div class="avatar">
+                    PG
+                </div>
+
+                <div class="user-info">
+
+                    <h3>
+                        Pooja Gupta
+                    </h3>
+
+                    <p>
+                        Business Analyst
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 10. KUNAL -->
+
+            <div
+                class="user"
+                data-name="Kunal Mehta"
+                onclick="openChat('Kunal Mehta')"
+            >
+
+                <div class="avatar">
+                    KM
+                </div>
+
+                <div class="user-info">
+
+                    <h3>
+                        Kunal Mehta
+                    </h3>
+
+                    <p>
+                        Software Developer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 11. ANJALI -->
+
+            <div
+                class="user"
+                data-name="Anjali Singh"
+                onclick="openChat('Anjali Singh')"
+            >
+
+                <div class="avatar">
+                    AS
+                </div>
+
+                <div class="user-info">
+
+                    <h3>
+                        Anjali Singh
+                    </h3>
+
+                    <p>
+                        Marketing Manager
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 12. SACHIN -->
+
+            <div
+                class="user"
+                data-name="Sachin Kumar"
+                onclick="openChat('Sachin Kumar')"
+            >
+
+                <div class="avatar">
+                    SK
+                </div>
+
+                <div class="user-info">
+
+                    <h3>
+                        Sachin Kumar
+                    </h3>
+
+                    <p>
+                        Java Developer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 13. RAHUL -->
+
+            <div
+                class="user"
+                data-name="Rahul Verma"
+                onclick="openChat('Rahul Verma')"
+            >
+
+                <div class="avatar">
+                    RV
+                </div>
+
+                <div class="user-info">
+
+                    <h3>
+                        Rahul Verma
+                    </h3>
+
+                    <p>
+                        React Developer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 14. KAVITA -->
+
+            <div
+                class="user"
+                data-name="Kavita Sharma"
+                onclick="openChat('Kavita Sharma')"
+            >
+
+                <div class="avatar">
+                    KS
+                </div>
+
+                <div class="user-info">
+
+                    <h3>
+                        Kavita Sharma
+                    </h3>
+
+                    <p>
+                        Data Scientist
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 15. MANISH -->
+
+            <div
+                class="user"
+                data-name="Manish Kumar"
+                onclick="openChat('Manish Kumar')"
+            >
+
+                <div class="avatar">
+                    MK
+                </div>
+
+                <div class="user-info">
+
+                    <h3>
+                        Manish Kumar
+                    </h3>
+
+                    <p>
+                        Salesforce Developer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= RIGHT SIDE ================= -->
+
+    <section class="chat-area">
+
+
+        <!-- ================= CHAT HEADER ================= -->
+
+        <div class="chat-header">
+
+
+            <div
+                class="avatar"
+                id="chatAvatar"
+            >
+                AS
+            </div>
+
+
+            <div>
+
+                <h2 id="chatName">
+                    Ayush Sharma
+                </h2>
+
+                <p>
+                    Online
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= MESSAGES ================= -->
+
+        <div
+            class="messages"
+            id="messages"
+        >
+
+        </div>
+
+
+
+        <!-- ================= MESSAGE INPUT ================= -->
+
+        <div class="message-input">
+
+
+            <input
+                type="text"
+                id="messageInput"
+                placeholder="Type your message..."
+            >
+
+
+            <button
+                id="sendButton"
+            >
+                Send
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+</main>
+
+
+
+<!-- ================= SOCKET.IO ================= -->
+
+<script src="/socket.io/socket.io.js"></script>
+
+
+<!-- ================= MESSAGE JAVASCRIPT ================= -->
+
+<script src="/js/messages.js"></script>
+
+
+</body>
+
+</html>

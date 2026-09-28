@@ -1,0 +1,3260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: white;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    color: #1d4ed8;
+}
+
+
+.logo img {
+    width: 40px;
+    height: 40px;
+
+    object-fit: contain;
+}
+
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+
+.navbar nav a {
+    text-decoration: none;
+
+    color: #333;
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+.navbar nav a:hover {
+    color: #2563eb;
+}
+
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+
+.nav-buttons button {
+    padding: 9px 18px;
+
+    border-radius: 6px;
+
+    border: 1px solid #2563eb;
+
+    background: white;
+
+    color: #2563eb;
+
+    cursor: pointer;
+}
+
+
+.nav-buttons .join-btn {
+    background: #2563eb;
+    color: white;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    background:
+        linear-gradient(
+            rgba(15, 35, 70, 0.78),
+            rgba(15, 35, 70, 0.78)
+        ),
+        url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac")
+        center/cover;
+}
+
+
+.hero-content {
+    max-width: 700px;
+
+    color: white;
+}
+
+
+.hero h1 {
+    font-size: 55px;
+
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 span {
+    color: #60a5fa;
+}
+
+
+.hero p {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+
+    color: #e5e7eb;
+}
+
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+}
+
+
+.hero-buttons button {
+    padding: 14px 25px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+.hero-buttons .outline-btn {
+    background: transparent;
+
+    border: 1px solid white;
+}
+
+
+/* ================= COMMON ================= */
+
+.section {
+    padding: 80px 8%;
+}
+
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.section-title h2 {
+    font-size: 36px;
+
+    margin-bottom: 12px;
+}
+
+
+.section-title p {
+    color: #666;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.about-card {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.07);
+}
+
+
+.about-card .icon {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+
+.about-card h3 {
+    margin-bottom: 12px;
+}
+
+
+.about-card p {
+    color: #666;
+
+    line-height: 1.6;
+}
+
+
+/* ================= SEARCH ================= */
+
+.search-box {
+    max-width: 600px;
+
+    margin: 0 auto 40px;
+}
+
+
+.search-box input {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+
+.search-box input:focus {
+    border-color: #2563eb;
+}
+
+
+/* ================= ALUMNI ================= */
+
+.alumni-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.alumni-card {
+    background: white;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.07);
+}
+
+
+.profile {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+
+.alumni-card h3 {
+    margin-bottom: 8px;
+}
+
+
+.alumni-card p {
+    color: #2563eb;
+
+    margin-bottom: 8px;
+}
+
+
+.alumni-card span {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+.alumni-card button,
+.event-card button,
+.job-card button {
+    margin-top: 18px;
+
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.alumni-card button:hover,
+.event-card button:hover,
+.job-card button:hover {
+    background: #1d4ed8;
+}
+
+
+/* ================= EVENTS ================= */
+
+.event-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+.event-card {
+    display: flex;
+
+    gap: 20px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.07);
+}
+
+
+.date {
+    min-width: 70px;
+
+    height: 75px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #2563eb;
+
+    color: white;
+
+    border-radius: 8px;
+}
+
+
+.date strong {
+    font-size: 26px;
+}
+
+
+.date small {
+    font-size: 12px;
+}
+
+
+.event-content h3 {
+    margin-bottom: 10px;
+}
+
+
+.event-content p {
+    color: #666;
+
+    margin-bottom: 7px;
+}
+
+
+/* ================= JOBS ================= */
+
+.jobs-section {
+    background: #eef4ff;
+}
+
+
+.job-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.job-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.07);
+}
+
+
+.job-card h3 {
+    margin-bottom: 18px;
+}
+
+
+.job-card p {
+    color: #666;
+
+    margin: 10px 0;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+    background: white;
+}
+
+
+.contact-section form {
+    max-width: 600px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+
+.contact-section textarea {
+    height: 150px;
+
+    resize: none;
+}
+
+
+.contact-section button {
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 8%;
+}
+
+
+.footer-logo {
+    font-size: 25px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+footer p {
+    color: #aaa;
+}
+
+
+.social {
+    margin: 20px 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+}
+
+
+.social a {
+    color: white;
+
+    text-decoration: none;
+}
+
+
+.copyright {
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #333;
+
+    font-size: 14px;
+}
+
+
+/* ================= MODAL ================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.65);
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 2000;
+}
+
+
+.modal-box {
+    width: 400px;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    position: relative;
+}
+
+
+.modal-box h2 {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+
+.modal-box form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.modal-box input,
+.modal-box select {
+    padding: 13px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    outline: none;
+}
+
+
+.modal-box button {
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.modal-box p {
+    text-align: center;
+
+    margin-top: 18px;
+
+    color: #666;
+}
+
+
+.modal-box p span {
+    color: #2563eb;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+.close {
+    position: absolute;
+
+    right: 20px;
+    top: 12px;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    color: #555;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .navbar nav {
+        display: none;
+    }
+
+    .alumni-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .job-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+
+    .hero {
+        padding: 60px 6%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .about-container,
+    .alumni-container,
+    .job-container,
+    .event-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 60px 6%;
+    }
+
+    .modal-box {
+        width: 90%;
+    }
+
+}
+
+/* =========================================
+   🔥 HARD / PREMIUM HOVER FOR ALL BUTTONS
+========================================= */
+
+button {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+}
+
+
+/* =========================================
+   SHINE EFFECT
+========================================= */
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 80%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.6),
+        transparent
+    );
+
+    transform: skewX(-25deg);
+    transition: left 0.5s ease;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   HARD HOVER
+========================================= */
+
+button:hover {
+    transform: translateY(-7px) scale(1.08);
+
+    box-shadow:
+        0 8px 15px rgba(0, 0, 0, 0.2),
+        0 0 20px rgba(37, 99, 235, 0.5),
+        0 0 40px rgba(37, 99, 235, 0.3);
+
+    filter: brightness(1.12);
+}
+
+
+/* SHINE MOVE */
+
+button:hover::before {
+    left: 130%;
+}
+
+
+/* =========================================
+   CLICK EFFECT
+========================================= */
+
+button:active {
+    transform: translateY(-2px) scale(0.96);
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================
+   HERO BUTTON HARD HOVER
+========================================= */
+
+.hero button:hover {
+    transform: translateY(-9px) scale(1.1);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.3),
+        0 0 25px rgba(37, 99, 235, 0.7),
+        0 0 50px rgba(37, 99, 235, 0.4);
+}
+
+
+/* =========================================
+   ALUMNI CARD BUTTON
+========================================= */
+
+.alumni-card button:hover {
+    transform: translateY(-8px) scale(1.1);
+
+    box-shadow:
+        0 10px 20px rgba(37, 99, 235, 0.4),
+        0 0 30px rgba(37, 99, 235, 0.6);
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   EVENT BUTTON
+========================================= */
+
+.event-card button:hover {
+    transform: translateY(-8px) scale(1.08);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(37, 99, 235, 0.5);
+}
+
+
+/* =========================================
+   JOB BUTTON
+========================================= */
+
+.job-card button:hover {
+    transform: translateY(-8px) scale(1.08);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(37, 99, 235, 0.5);
+}
+
+
+/* =========================================
+   CONTACT BUTTON
+========================================= */
+
+.contact-section button:hover {
+    transform: translateY(-8px) scale(1.08);
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.5),
+        0 0 35px rgba(37, 99, 235, 0.5);
+}
+
+
+/* =========================================
+   LOGIN / REGISTER BUTTON
+========================================= */
+
+.modal button:hover {
+    transform: translateY(-7px) scale(1.08);
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.5),
+        0 0 35px rgba(37, 99, 235, 0.5);
+}
+
+/* =========================================
+   🔥 HARD HOVER - NAVBAR LINKS
+========================================= */
+
+.navbar nav a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 8px;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease,
+        text-shadow 0.25s ease;
+}
+
+
+/* HARD HOVER */
+
+.navbar nav a:hover {
+    color: #ffffff;
+
+    background: #1d4ed8;
+
+    transform:
+        translateY(-5px)
+        scale(1.12);
+
+    box-shadow:
+        0 8px 15px rgba(0, 0, 0, 0.25),
+        0 0 18px rgba(37, 99, 235, 0.8),
+        0 0 35px rgba(37, 99, 235, 0.5);
+
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.9);
+}
+
+
+/* SHINE EFFECT */
+
+.navbar nav a::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.6),
+        transparent
+    );
+
+    transform: skewX(-25deg);
+
+    transition:
+        left 0.45s ease;
+
+    pointer-events: none;
+}
+
+
+/* SHINE ON HOVER */
+
+.navbar nav a:hover::before {
+    left: 140%;
+}
+
+
+/* CLICK EFFECT */
+
+.navbar nav a:active {
+    transform:
+        translateY(-1px)
+        scale(0.98);
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================
+   COLLEGE IMAGE - SMALL & FULL IMAGE
+========================================= */
+
+.college-image {
+    width: 70px;
+    height: 70px;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+
+    border: 2px solid white;
+
+    box-shadow:
+        0 0 8px rgba(255, 255, 255, 0.5);
+
+    transition: all 0.3s ease;
+}
+
+/* =========================================
+   HOME PAGE BACKGROUND IMAGE
+========================================= */
+
+.hero {
+    background-image:
+        linear-gradient(
+            rgba(0, 60, 130, 0.55),
+            rgba(0, 60, 130, 0.55)
+        ),
+        url("images/home.png.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* =========================================
+   PRESTIGE COLLEGE TEXT VERTICAL CENTER
+========================================= */
+
+.college-brand {
+    display: flex;
+    align-items: center;
+}
+
+.college-name {
+    display: flex;
+    align-items: center;
+
+    height: 38px;
+    line-height: 38px;
+}
+
+/* =====================================================
+   LOGIN REQUIRED LOCK
+===================================================== */
+
+body.authentication-required > *:not(.modal) {
+    pointer-events: none;
+    user-select: none;
+    filter: blur(3px);
+}
+
+
+/* Login and Register modal always clickable */
+
+body.authentication-required .modal {
+    pointer-events: auto;
+    filter: none;
+}
+
+
+/* Dark background while login is required */
+
+body.authentication-required::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.65);
+
+    z-index: 9998;
+
+}
+
+
+/* Modal above dark background */
+
+body.authentication-required .modal {
+
+    z-index: 9999;
+
+}
+
+
+/* Welcome user */
+
+.welcome-user {
+
+    color: white;
+
+    font-weight: 600;
+
+    margin-right: 10px;
+
+}
+
+
+/* Logout button */
+
+.logout-btn {
+
+    background: #dc2626 !important;
+
+    color: white !important;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+
+}
+
+
+.logout-btn:hover {
+
+    background: #b91c1c !important;
+
+    transform:
+        translateY(-4px)
+        scale(1.05);
+
+    box-shadow:
+        0 8px 20px
+        rgba(220, 38, 38, 0.45);
+
+}
+
+/* ================= LOGIN REQUIRED ================= */
+
+body.authentication-required > *:not(.modal) {
+    pointer-events: none;
+    user-select: none;
+    filter: blur(3px);
+}
+
+body.authentication-required::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 9998;
+}
+
+body.authentication-required .modal {
+    pointer-events: auto;
+    filter: none;
+    z-index: 9999;
+}
+
+/* ==========================================
+   MAIN NAVBAR
+========================================== */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 18px 30px;
+    background: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #173b70;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    color: #0b7dda;
+}
+
+
+/* ==========================================
+   NAVBAR SEARCH
+========================================== */
+
+.nav-search {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.nav-search input {
+    width: 120px;
+    padding: 7px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.nav-search button {
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 3px 6px;
+}
+
+.nav-search button:hover {
+    transform: scale(1.1);
+}
+
+.main-nav {
+    overflow-x: auto;
+}
+
+/* COMPACT NAVBAR */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 15px;
+    background: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.main-nav a {
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.nav-search {
+    margin-left: 2px;
+}
+
+.nav-search input {
+    width: 75px;
+    padding: 5px 6px;
+    font-size: 11px;
+}
+
+.nav-search button {
+    font-size: 18px;
+    padding: 2px 4px;
+}
+
+/* VERY SMALL NAVBAR */
+
+.main-nav {
+    gap: 6px;
+    padding: 7px 8px;
+    height: 42px;
+}
+
+.main-nav a {
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.nav-search {
+    margin-left: 0;
+}
+
+.nav-search input {
+    width: 50px;
+    height: 20px;
+    padding: 2px 4px;
+    font-size: 9px;
+}
+
+.nav-search button {
+    font-size: 14px;
+    padding: 0 2px;
+}
+
+/* ==========================================
+   ULTRA COMPACT NAVBAR
+========================================== */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    padding: 4px 5px;
+
+    height: 30px;
+
+    background: #ffffff;
+
+    box-sizing: border-box;
+}
+
+
+/* NAV LINKS */
+
+.main-nav a {
+    font-size: 7px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    padding: 2px 3px;
+
+    white-space: nowrap;
+
+    text-decoration: none;
+
+    color: #173b70;
+}
+
+
+/* SEARCH */
+
+.nav-search {
+    display: flex;
+
+    align-items: center;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+.nav-search input {
+    width: 40px;
+
+    height: 16px;
+
+    padding: 1px 3px;
+
+    font-size: 7px;
+
+    border: 1px solid #ccc;
+
+    outline: none;
+}
+
+
+.nav-search button {
+    font-size: 12px;
+
+    padding: 0;
+
+    margin: 0;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+/* ===== NAVBAR 10% SMALLER ===== */
+
+.navbar {
+    padding: 6px 20px !important;
+    min-height: 58px !important;
+    height: 65px !important;
+}
+
+.navbar img {
+    width: 52px !important;
+    height: 52px !important;
+}
+
+.navbar h1 {
+    font-size: 21px !important;
+}
+
+.main-nav {
+    gap: 9px !important;
+    padding: 5px 13px !important;
+    min-height: 44px !important;
+    height: 47px !important;
+}
+
+.main-nav a {
+    font-size: 13px !important;
+    padding: 5px 4px !important;
+}
+
+.nav-search {
+    margin-left: 6px !important;
+}
+
+.nav-search input {
+    width: 117px !important;
+    height: 31px !important;
+    font-size: 12px !important;
+}
+
+.nav-search button {
+    width: 32px !important;
+    height: 31px !important;
+    font-size: 12px !important;
+}
+
+/* =========================================
+   PIMR COLLEGE ALUMNI SECTION
+========================================= */
+
+.pimr-section {
+    width: 100%;
+    min-height: 500px;
+
+    padding: 70px 8%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 60px;
+
+    background: linear-gradient(
+        135deg,
+        #3025c9,
+        #5b36d9
+    );
+}
+
+
+/* LEFT IMAGE */
+
+.pimr-image {
+    width: 45%;
+}
+
+.pimr-image img {
+    width: 100%;
+    height: 330px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    display: block;
+}
+
+
+/* RIGHT CONTENT */
+
+.pimr-content {
+    width: 45%;
+
+    color: white;
+}
+
+.pimr-content h1 {
+    font-size: 42px;
+
+    margin: 0 0 12px;
+
+    font-weight: 700;
+}
+
+.pimr-content h2 {
+    font-size: 25px;
+
+    margin: 0 0 22px;
+
+    font-weight: 600;
+}
+
+.pimr-content p {
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .pimr-section {
+        flex-direction: column;
+
+        padding: 50px 6%;
+
+        gap: 35px;
+    }
+
+    .pimr-image {
+        width: 100%;
+    }
+
+    .pimr-content {
+        width: 100%;
+    }
+
+    .pimr-image img {
+        height: 280px;
+    }
+
+    .pimr-content h1 {
+        font-size: 32px;
+    }
+
+    .pimr-content h2 {
+        font-size: 21px;
+    }
+
+}
+
+/* =========================================
+   DIRECTOR MESSAGE SECTION
+========================================= */
+
+.director-section {
+    width: 100%;
+    min-height: 520px;
+
+    padding: 75px 8%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 65px;
+
+    background: #f7f8fc;
+}
+
+
+/* DIRECTOR IMAGE */
+
+.director-image {
+    width: 38%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.director-image img {
+    width: 100%;
+    max-width: 380px;
+    height: 420px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* DIRECTOR CONTENT */
+
+.director-content {
+    width: 50%;
+}
+
+.director-content h1 {
+    font-size: 38px;
+
+    color: #3025c9;
+
+    margin: 0 0 10px;
+}
+
+.director-content h2 {
+    font-size: 27px;
+
+    color: #222;
+
+    margin: 0 0 22px;
+}
+
+.director-content p {
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #555;
+
+    margin-bottom: 15px;
+}
+
+
+/* DIRECTOR SIGNATURE */
+
+.director-signature {
+    margin-top: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.director-signature strong {
+    font-size: 18px;
+
+    color: #3025c9;
+}
+
+.director-signature span {
+    font-size: 15px;
+
+    color: #666;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .director-section {
+        flex-direction: column;
+
+        padding: 50px 6%;
+
+        gap: 35px;
+    }
+
+    .director-image {
+        width: 100%;
+    }
+
+    .director-content {
+        width: 100%;
+    }
+
+    .director-image img {
+        height: 350px;
+    }
+
+    .director-content h1 {
+        font-size: 30px;
+    }
+
+    .director-content h2 {
+        font-size: 23px;
+    }
+
+}
+
+/* =====================================================
+   RIGHT SIDE FIXED BUTTONS
+   ===================================================== */
+
+.right-fixed-buttons {
+    position: fixed;
+    right: 0;
+    top: 30%;
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Common Button */
+
+.fixed-btn {
+    width: 210px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 0 22px;
+
+    box-sizing: border-box;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    border-radius: 35px 0 0 35px;
+
+    transform: translateX(20px);
+
+    transition: 0.3s ease;
+}
+
+/* Hover par pura button bahar aa jayega */
+
+.fixed-btn:hover {
+    transform: translateX(0);
+}
+
+/* Admission */
+
+.admission-btn {
+    background: #123f9c;
+}
+
+.admission-btn:hover {
+    background: #0d327d;
+}
+
+/* Enquiry */
+
+.enquiry-btn {
+    background: #e67d79;
+}
+
+.enquiry-btn:hover {
+    background: #d85f5a;
+}
+
+/* Contact */
+
+.contact-btn {
+    background: #123f9c;
+}
+
+.contact-btn:hover {
+    background: #0d327d;
+}
+
+/* Events */
+
+.events-btn {
+    background: #18aebd;
+}
+
+.events-btn:hover {
+    background: #12929f;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .right-fixed-buttons {
+        top: 35%;
+    }
+
+    .fixed-btn {
+        width: 160px;
+        height: 48px;
+
+        font-size: 14px;
+
+        padding: 0 15px;
+
+        gap: 8px;
+    }
+}
+
+/* =====================================================
+   MAIN FOOTER
+   ===================================================== */
+
+.main-footer {
+    width: 100%;
+    background: #123f9c;
+    color: white;
+    margin-top: 0;
+}
+
+
+/* =====================================================
+   FOOTER MAIN CONTAINER
+   ===================================================== */
+
+.footer-container {
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
+
+    padding: 55px 0 35px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    gap: 45px;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   INSTITUTE CARD
+   ===================================================== */
+
+.footer-institute {
+    display: flex;
+    align-items: flex-start;
+}
+
+.institute-card {
+    width: 250px;
+    min-height: 170px;
+
+    background: white;
+    color: #222;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.institute-logo {
+    width: 100%;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+}
+
+.institute-logo img {
+    width: 75px;
+    height: 30px;
+
+    object-fit: contain;
+}
+
+.institute-card h2 {
+    font-size: 18px;
+    line-height: 1.35;
+
+    font-weight: 500;
+
+    margin: 8px 0 12px;
+}
+
+
+/* =====================================================
+   SOCIAL ICONS
+   ===================================================== */
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social a {
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+
+    background: #123f9c;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    transform: translateY(-3px);
+    background: #e67d79;
+}
+
+
+/* =====================================================
+   FOOTER COLUMNS
+   ===================================================== */
+
+.footer-column h3 {
+    font-size: 19px;
+    margin: 0;
+
+    font-weight: 700;
+}
+
+.footer-line {
+    width: 88px;
+    height: 3px;
+
+    background: #e88b91;
+
+    margin: 10px 0 16px;
+}
+
+.footer-column a {
+    display: block;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 13px;
+
+    margin-bottom: 13px;
+
+    transition: 0.3s;
+}
+
+.footer-column a:hover {
+    color: #ffb4b8;
+    padding-left: 4px;
+}
+
+
+/* =====================================================
+   CONTACT SECTION
+   ===================================================== */
+
+.footer-contact-container {
+    width: 90%;
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 0 0 28px;
+
+    display: grid;
+    grid-template-columns: 1fr 1.25fr 1fr;
+
+    gap: 40px;
+
+    box-sizing: border-box;
+}
+
+.footer-contact-box {
+    display: flex;
+    gap: 15px;
+
+    align-items: flex-start;
+}
+
+.contact-icon {
+    font-size: 28px;
+    color: #ffb0b5;
+
+    min-width: 28px;
+}
+
+.footer-contact-box h4 {
+    font-size: 17px;
+
+    margin: 0 0 7px;
+
+    font-weight: 600;
+}
+
+.footer-contact-box p {
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin: 0;
+
+    color: #f3f3f3;
+}
+
+.contact-sub-title {
+    margin-top: 20px !important;
+}
+
+
+/* =====================================================
+   COPYRIGHT
+   ===================================================== */
+
+.footer-bottom {
+    width: 100%;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+
+    text-align: center;
+
+    padding: 10px 15px;
+
+    box-sizing: border-box;
+
+    background: #0f378b;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #f1f1f1;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .footer-contact-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .footer-container {
+        width: 88%;
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 40px 0 30px;
+    }
+
+    .institute-card {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .footer-contact-container {
+        width: 88%;
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .footer-column h3 {
+        font-size: 18px;
+    }
+
+    .footer-column a {
+        font-size: 13px;
+    }
+
+    .footer-bottom p {
+        font-size: 10px;
+    }
+}
+/* ================= PLACEMENTS ================= */
+
+.placements-section {
+    text-align: center;
+    padding: 60px 5%;
+    background: white;
+}
+
+.placements-section h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #123f9c;
+}
+
+.placement-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.placement-box img {
+    width: 700px;
+    max-width: 80%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.placement-box button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #123f9c;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.placement-box button:hover {
+    background: #e67d79;
+}
+
+.placements-section h3 {
+    color: #123f9c;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* ================= PLACEMENT SLIDER ================= */
+
+.placements-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    overflow: hidden;
+}
+
+.placements-section h1 {
+    color: #123f9c;
+    font-size: 34px;
+    margin-bottom: 35px;
+}
+
+.placement-slider {
+    position: relative;
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placement-track {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    overflow: hidden;
+}
+
+.placement-card {
+    width: 280px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 0 -25px;
+    opacity: 0.55;
+    transform: scale(0.82);
+    transition: all 0.7s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* Center image */
+
+.placement-card.active {
+    width: 350px;
+    height: 450px;
+    opacity: 1;
+    transform: scale(1);
+    z-index: 5;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* Buttons */
+
+.placement-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #123f9c;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.placement-btn:hover {
+    background: #e67d79;
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+
+.placements-section h3 {
+    color: #123f9c;
+    margin-top: 25px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .placement-card {
+        width: 180px;
+        height: 260px;
+    }
+
+    .placement-card.active {
+        width: 230px;
+        height: 310px;
+    }
+
+    .placement-card:nth-child(1),
+    .placement-card:nth-child(5) {
+        display: none;
+    }
+
+    .placement-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 25px;
+    }
+}
+
+/* ===== NAVBAR VERTICAL CENTER ===== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a,
+.navbar input,
+.navbar button {
+    vertical-align: middle;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo,
+.navbar .nav-links,
+.navbar .search-box {
+    display: flex;
+    align-items: center;
+}/* Search bar CAREERS ke right side */
+
+#navSearch {
+    margin-left: 15px;
+    margin-right: 0;
+    height: 36px;
+    width: 150px;
+    box-sizing: border-box;
+}
+
+/* ================= NAV SEARCH RIGHT OF CAREERS ================= */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.main-nav .nav-search {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.main-nav #navSearch {
+    width: 150px;
+    height: 36px;
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+
+.main-nav .nav-search button {
+    height: 36px;
+    width: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+/* =========================================
+   CLEAN NAVBAR
+========================================= */
+
+.main-nav {
+    width: 100%;
+    height: 47px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 5px 13px;
+
+    background: #ffffff;
+
+    box-sizing: border-box;
+}
+
+/* Navbar links */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    flex: 1;
+}
+
+.nav-links a {
+    text-decoration: none;
+
+    color: #173b70;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    padding: 5px 4px;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+    background: #1d4ed8;
+
+    border-radius: 6px;
+}
+
+/* =========================================
+   SEARCH - CAREERS KE RIGHT SIDE
+========================================= */
+
+.nav-search {
+    display: flex;
+    align-items: center;
+
+    margin-left: 12px;
+
+    flex-shrink: 0;
+}
+
+.nav-search input {
+    width: 117px;
+    height: 31px;
+
+    padding: 5px 8px;
+
+    font-size: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px 0 0 4px;
+
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+.nav-search input:focus {
+    border-color: #2563eb;
+}
+
+.nav-search button {
+    width: 32px;
+    height: 31px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.nav-search button:hover {
+    transform: scale(1.1);
+}
+
+
+/* ================= REMOVE NAVBAR HOVER ================= */
+
+.nav-links a:hover {
+    color: inherit !important;
+    background: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+}
+/* ==========================================================
+   UNIVERSAL DROPDOWN CSS - Sabhi Dropdowns Ke Liye
+   ========================================================== */
+
+/* 1. Har dropdown container */
+.main-nav .nav-links .dropdown {
+    position: relative !important;
+    display: inline-block !important;
+    overflow: visible !important;
+}
+
+/* 2. Dropdown Button (About Us, Message, etc.) */
+.main-nav .nav-links .dropdown .dropbtn {
+    text-decoration: none !important;
+    color: #333 !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    padding: 10px 12px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    cursor: pointer !important;
+    background: transparent !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+    font-family: inherit !important;
+    line-height: 1 !important;
+    transition: color 0.2s !important;
+}
+
+/* Hover effect on button */
+.main-nav .nav-links .dropdown .dropbtn:hover {
+    color: #b22222 !important;
+}
+
+/* 3. Arrow (▼) styling */
+.main-nav .nav-links .dropdown .dropbtn .arrow {
+    font-size: 9px !important;
+    color: #555 !important;
+    transition: transform 0.3s !important;
+}
+
+/* 4. Dropdown Content (Hidden by default) */
+.main-nav .nav-links .dropdown .dropdown-content {
+    display: none !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background-color: #fdfae7 !important;
+    min-width: 220px !important;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2) !important;
+    z-index: 99999 !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 4px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-direction: column !important;
+}
+
+/* 5. Dropdown ke andar ke links */
+.main-nav .nav-links .dropdown .dropdown-content a {
+    display: block !important;
+    width: 100% !important;
+    padding: 11px 16px !important;
+    color: #444 !important;
+    text-decoration: none !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    text-transform: capitalize !important;
+    border-bottom: 1px solid #eee !important;
+    background: transparent !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    text-align: left !important;
+    line-height: 1.3 !important;
+    transition: 0.2s !important;
+}
+
+/* Last link border remove */
+.main-nav .nav-links .dropdown .dropdown-content a:last-child {
+    border-bottom: none !important;
+}
+
+/* Hover effect on dropdown links */
+.main-nav .nav-links .dropdown .dropdown-content a:hover {
+    background-color: #f0ead0 !important;
+    color: #b22222 !important;
+    padding-left: 22px !important;
+}
+
+/* 6. Show dropdown on hover */
+.main-nav .nav-links .dropdown:hover .dropdown-content {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* 7. Arrow rotate on hover */
+.main-nav .nav-links .dropdown:hover .dropbtn .arrow {
+    transform: rotate(180deg) !important;
+}
+
+/* 8. Navbar overflow visible */
+.navbar, .main-nav, .nav-links {
+    overflow: visible !important;
+}
+
+/* ==========================================================
+   RIGHT SIDE DROPDOWNS FIX
+   (Careers, Contact Us wagera screen se bahar na jayein)
+   ========================================================== */
+
+.main-nav .nav-links .dropdown:nth-last-child(-n+4) .dropdown-content {
+    left: auto !important;
+    right: 0 !important;
+}
+/* Dropdown Content base style */
+.main-nav .nav-links .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fdfae7;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 999999;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Dropdown links */
+.main-nav .nav-links .dropdown-content a {
+    display: block;
+    width: 100%;
+    padding: 11px 16px;
+    color: #444;
+    text-decoration: none;
+    font-size: 13px;
+    border-bottom: 1px solid #eee;
+    background: transparent;
+    box-sizing: border-box;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.main-nav .nav-links .dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.main-nav .nav-links .dropdown-content a:hover {
+    background-color: #f0ead0;
+    color: #b22222;
+}
+
+/* Navbar overflow fix */
+.navbar, .main-nav, .nav-links {
+    overflow: visible !important;
+}
+/* ==========================================================
+   SUPER TINY NAVBAR
+   Navbar bahut hi chhoti + Dropdown kaam kare + Hero pura dikhe
+   ========================================================== */
+
+/* 1. Navbar ki height bahut chhoti */
+.navbar {
+    height: 28px !important;
+    min-height: 28px !important;
+    max-height: 28px !important;
+    padding: 0 2% !important;
+    overflow: visible !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 10000 !important;
+}
+
+/* 2. Logo bahut chhota */
+.navbar img,
+.college-image {
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.navbar h1,
+.college-name {
+    font-size: 8px !important;
+    height: auto !important;
+    line-height: 1 !important;
+}
+
+/* 3. Main nav ki height bahut chhoti */
+.main-nav {
+    height: 20px !important;
+    min-height: 20px !important;
+    max-height: 20px !important;
+    padding: 0 3px !important;
+    gap: 2px !important;
+    overflow: visible !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* 4. Nav links ka size bahut chhota */
+.main-nav a,
+.main-nav .dropbtn {
+    font-size: 6px !important;
+    font-weight: 600 !important;
+    padding: 1px 2px !important;
+    white-space: nowrap !important;
+    letter-spacing: 0.1px !important;
+}
+
+/* 5. Dropdown button */
+.main-nav .nav-links .dropdown {
+    position: relative !important;
+    display: inline-block !important;
+}
+
+.main-nav .nav-links .dropdown .dropbtn {
+    color: #173b70 !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 1px !important;
+    background: transparent !important;
+    cursor: pointer !important;
+    line-height: 1 !important;
+}
+
+.main-nav .nav-links .dropdown .dropbtn:hover {
+    color: #0b7dda !important;
+}
+
+.main-nav .nav-links .dropdown .dropbtn .arrow {
+    font-size: 4px !important;
+    color: #555 !important;
+}
+
+/* 6. DROPDOWN CONTENT */
+.main-nav .nav-links .dropdown .dropdown-content {
+    display: none !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background-color: #fdfae7 !important;
+    min-width: 120px !important;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2) !important;
+    z-index: 99999 !important;
+    border: 1px solid #d0d0d0 !important;
+    border-radius: 3px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-direction: column !important;
+}
+
+/* 7. Dropdown links */
+.main-nav .nav-links .dropdown .dropdown-content a {
+    display: block !important;
+    width: 100% !important;
+    padding: 4px 8px !important;
+    color: #444 !important;
+    text-decoration: none !important;
+    font-size: 9px !important;
+    font-weight: 500 !important;
+    text-transform: capitalize !important;
+    border-bottom: 1px solid #eee !important;
+    background: transparent !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    text-align: left !important;
+}
+
+.main-nav .nav-links .dropdown .dropdown-content a:last-child {
+    border-bottom: none !important;
+}
+
+.main-nav .nav-links .dropdown .dropdown-content a:hover {
+    background-color: #f0ead0 !important;
+    color: #b22222 !important;
+    padding-left: 12px !important;
+}
+
+/* 8. Hover par dropdown show */
+.main-nav .nav-links .dropdown:hover .dropdown-content {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* 9. Right side dropdowns */
+.main-nav .nav-links .dropdown:nth-last-child(-n+4) .dropdown-content {
+    left: auto !important;
+    right: 0 !important;
+}
+
+/* 10. Search bar bahut chhota */
+.nav-search input {
+    width: 40px !important;
+    height: 13px !important;
+    font-size: 6px !important;
+    padding: 1px 3px !important;
+    border-radius: 2px 0 0 2px !important;
+}
+
+.nav-search button {
+    width: 13px !important;
+    height: 13px !important;
+    font-size: 7px !important;
+    padding: 0 !important;
+}
+
+/* 11. Hero section pura screen par fit */
+.hero {
+    min-height: calc(100vh - 28px) !important;
+    padding: 20px 5% !important;
+    box-sizing: border-box !important;
+}
+
+.hero h1 {
+    font-size: 34px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 15px !important;
+}
+
+.hero p {
+    font-size: 14px !important;
+    margin-bottom: 18px !important;
+}
+
+.hero-buttons button {
+    padding: 9px 16px !important;
+    font-size: 12px !important;
+}
+
+/* 12. Overflow visible */
+.navbar,
+.main-nav,
+.nav-links,
+.dropdown {
+    overflow: visible !important;
+}
+
+/* 13. Nav buttons chhote */
+.nav-buttons button {
+    padding: 3px 7px !important;
+    font-size: 8px !important;
+}
+/* ==========================================================
+   NAVBAR GAP FIX - 7px
+   ABOUT US aur MESSAGE ke beech ka gap 5px se 7px
+   ========================================================== */
+
+.main-nav,
+.main-nav .nav-links {
+    gap: 7px !important;
+    column-gap: 7px !important;
+    row-gap: 0px !important;
+}
+
+.main-nav .nav-links a,
+.main-nav .nav-links .dropbtn,
+.main-nav a {
+    padding: 3px 7px !important;
+    margin: 0 !important;
+}
+
+.main-nav .nav-links .dropdown .dropbtn {
+    gap: 2px !important;
+    padding: 3px 7px !important;
+}
+
+.main-nav .nav-links .dropdown .dropbtn .arrow {
+    margin-left: 2px !important;
+    font-size: 6px !important;
+}
+
+.nav-search {
+    margin-left: 6px !important;
+}
+/* ==========================================================
+   DROPDOWN CONTENT - BIGGER SIZE
+   Dropdown ka andar ka part bada aur readable ho
+   ========================================================== */
+
+/* 1. Dropdown box ki width badhayein */
+.main-nav .nav-links .dropdown .dropdown-content {
+    min-width: 220px !important;
+    padding: 4px 0 !important;
+}
+
+/* 2. Dropdown links ka font aur padding bada karein */
+.main-nav .nav-links .dropdown .dropdown-content a {
+    font-size: 14px !important;
+    padding: 12px 18px !important;
+    line-height: 1.4 !important;
+    font-weight: 500 !important;
+}
+
+/* 3. Hover effect */
+.main-nav .nav-links .dropdown .dropdown-content a:hover {
+    background-color: #f0ead0 !important;
+    color: #b22222 !important;
+    padding-left: 22px !important;
+}
+
+/* 4. Dropdown box ka shadow thoda strong */
+.main-nav .nav-links .dropdown .dropdown-content {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2) !important;
+    border-radius: 5px !important;
+}
+
+/* 5. Border thoda clear */
+.main-nav .nav-links .dropdown .dropdown-content a {
+    border-bottom: 1px solid #e8e8e8 !important;
+}
+
+.main-nav .nav-links .dropdown .dropdown-content a:last-child {
+    border-bottom: none !important;
+}
+/* ==========================================================
+   NAVBAR HOVER EFFECT REMOVE
+   Sirf text color change hoga, koi glow/lift/shine nahi
+   ========================================================== */
+
+/* 1. Saare navbar links ka hover effect hatao */
+.navbar nav a,
+.navbar nav a:hover,
+.main-nav a,
+.main-nav a:hover,
+.nav-links a,
+.nav-links a:hover,
+.dropbtn,
+.dropbtn:hover {
+    background: transparent !important;
+    transform: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    border-radius: 0 !important;
+    padding: inherit !important;
+}
+
+/* 2. Shine effect (::before) hatao */
+.navbar nav a::before,
+.main-nav a::before,
+.nav-links a::before,
+.dropbtn::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* 3. Sirf text color change rahe */
+.navbar nav a:hover,
+.main-nav a:hover,
+.nav-links a:hover,
+.dropbtn:hover {
+    color: #0b7dda !important;
+}
+
+/* 4. Dropdown content ke links par bhi koi extra effect nahi */
+.dropdown-content a:hover {
+    background: #f0ead0 !important;
+    color: #b22222 !important;
+    padding-left: 18px !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+/* ==========================================================
+   TOP BAR - SINGLE LINE (Ek hi line mein)
+   ========================================================== */
+
+.top-bar {
+    width: 100%;
+    height: 38px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    position: relative;
+    z-index: 10001;
+    white-space: nowrap;      /* Text ko wrap hone se roke */
+    overflow: hidden;
+}
+
+/* LEFT SIDE - Phone & Email (ek line mein) */
+.top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-shrink: 0;
+}
+
+.top-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #d11a2a;
+    font-weight: 600;
+    font-size: 13px;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.top-contact:hover {
+    color: #a0121f;
+}
+
+.top-contact .icon {
+    font-size: 13px;
+}
+
+/* CENTER - Admissions Text */
+.top-bar-center {
+    color: #123f9c;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+/* RIGHT SIDE - Buttons (ek line mein) */
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.top-btn {
+    padding: 5px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+/* Examination Button (Red) */
+.top-btn.examination-btn {
+    background: #d11a2a;
+    color: #ffffff;
+    border: 1px solid #d11a2a;
+}
+
+.top-btn.examination-btn:hover {
+    background: #a0121f;
+    border-color: #a0121f;
+}
+
+/* ERP Login Button (Darker Red) */
+.top-btn.erp-btn {
+    background: #b0141f;
+    color: #ffffff;
+    border: 1px solid #b0141f;
+}
+
+.top-btn.erp-btn:hover {
+    background: #8a0f18;
+    border-color: #8a0f18;
+}
+
+/* ==========================================================
+   RESPONSIVE - Chhoti screen par bhi ek line mein rahe
+   ========================================================== */
+
+@media (max-width: 1100px) {
+    .top-bar {
+        font-size: 11px;
+        padding: 0 12px;
+    }
+
+    .top-bar-left {
+        gap: 12px;
+    }
+
+    .top-contact {
+        font-size: 11px;
+    }
+
+    .top-bar-center {
+        font-size: 11px;
+    }
+
+    .top-btn {
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .top-bar {
+        font-size: 10px;
+        padding: 0 8px;
+    }
+
+    .top-bar-left {
+        gap: 8px;
+    }
+
+    .top-contact {
+        font-size: 10px;
+    }
+
+    .top-contact .icon {
+        display: none;      /* Mobile par icon chhupa dein */
+    }
+
+    .top-bar-center {
+        font-size: 10px;
+    }
+
+    .top-btn {
+        padding: 3px 8px;
+        font-size: 9px;
+    }
+}
+/* ==========================================================
+   TOP BAR - FULL CSS (Ek hi line mein + Scrolling Text)
+   ========================================================== */
+
+.top-bar {
+    width: 100%;
+    height: 38px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    position: relative;
+    z-index: 10001;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* LEFT SIDE */
+.top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-shrink: 0;
+}
+
+.top-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #d11a2a;
+    font-weight: 600;
+    font-size: 13px;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.top-contact:hover {
+    color: #a0121f;
+}
+
+.top-contact .icon {
+    font-size: 13px;
+}
+
+/* CENTER - SCROLLING TEXT */
+.top-bar-center {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.top-bar-center span {
+    display: inline-block;
+    white-space: nowrap;
+    color: #123f9c;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    position: absolute;
+    animation: scrollText 20s linear infinite;
+    padding-left: 100%;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.top-bar-center:hover span {
+    animation-play-state: paused;
+}
+
+/* RIGHT SIDE - Buttons */
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.top-btn {
+    padding: 5px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.top-btn.examination-btn {
+    background: #d11a2a;
+    color: #ffffff;
+    border: 1px solid #d11a2a;
+}
+
+.top-btn.examination-btn:hover {
+    background: #a0121f;
+    border-color: #a0121f;
+}
+
+.top-btn.erp-btn {
+    background: #b0141f;
+    color: #ffffff;
+    border: 1px solid #b0141f;
+}
+
+.top-btn.erp-btn:hover {
+    background: #8a0f18;
+    border-color: #8a0f18;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .top-bar {
+        font-size: 11px;
+        padding: 0 12px;
+    }
+    .top-bar-left { gap: 12px; }
+    .top-contact { font-size: 11px; }
+    .top-bar-center span { font-size: 11px; }
+    .top-btn { padding: 4px 10px; font-size: 10px; }
+}
+
+@media (max-width: 800px) {
+    .top-bar {
+        font-size: 10px;
+        padding: 0 8px;
+    }
+    .top-bar-left { gap: 8px; }
+    .top-contact { font-size: 10px; }
+    .top-contact .icon { display: none; }
+    .top-bar-center span { font-size: 10px; }
+    .top-btn { padding: 3px 8px; font-size: 9px; }
+}
+/* ==========================================================
+   TOP BAR + NAVBAR - SCROLL KE SAATH UPAR JAYE
+   (Koi sticky ya fixed nahi)
+   ========================================================== */
+
+/* Top Bar - Normal flow mein rahe */
+.top-bar {
+    position: relative !important;
+    top: auto !important;
+    z-index: 10001 !important;
+}
+
+/* Navbar - Normal flow mein rahe */
+.navbar {
+    position: relative !important;
+    top: auto !important;
+    z-index: 1000 !important;
+}
+
+/* ================= HOME HERO IMAGE ================= */
+
+.hero {
+    background-image:
+        linear-gradient(
+            rgba(0, 60, 130, 0.55),
+            rgba(0, 60, 130, 0.55)
+        ),
+        url("../images/home.png.jpeg") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}

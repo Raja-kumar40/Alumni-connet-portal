@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Message - Prestige College</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+        /* ================= NAVBAR CSS ================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+        }
+
+        .navbar {
+            height: 55px !important;
+            min-height: 55px !important;
+            max-height: 55px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            padding: 0 3% !important;
+            background: #ffffff !important;
+            position: sticky !important;
+            top: 0 !important;
+            z-index: 10000 !important;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+            overflow: visible !important;
+        }
+
+        .college-brand {
+            display: flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+        }
+
+        .college-image {
+            width: 32px !important;
+            height: 32px !important;
+            object-fit: contain !important;
+            border-radius: 50% !important;
+            border: 2px solid #eee !important;
+        }
+
+        .college-name {
+            font-size: 13px !important;
+            font-weight: bold !important;
+            color: #123f9c !important;
+            white-space: nowrap !important;
+        }
+
+        .main-nav {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 5px !important;
+            height: 40px !important;
+            padding: 0 5px !important;
+            overflow: visible !important;
+        }
+
+        .nav-links {
+            display: flex !important;
+            align-items: center !important;
+            gap: 5px !important;
+            list-style: none !important;
+        }
+
+        .main-nav a {
+            text-decoration: none !important;
+            color: #173b70 !important;
+            font-size: 11px !important;
+            font-weight: 600 !important;
+            padding: 4px 6px !important;
+            white-space: nowrap !important;
+            text-transform: uppercase !important;
+        }
+
+        .main-nav a:hover {
+            color: #0b7dda !important;
+        }
+
+        .dropdown {
+            position: relative !important;
+            display: inline-block !important;
+        }
+
+        .dropbtn {
+            text-decoration: none !important;
+            color: #173b70 !important;
+            font-size: 11px !important;
+            font-weight: 600 !important;
+            padding: 4px 6px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 3px !important;
+            text-transform: uppercase !important;
+            cursor: pointer !important;
+            white-space: nowrap !important;
+        }
+
+        .dropbtn:hover {
+            color: #0b7dda !important;
+        }
+
+        .arrow {
+            font-size: 7px !important;
+            color: #555 !important;
+        }
+
+        .dropdown-content {
+            display: none !important;
+            position: absolute !important;
+            top: 100% !important;
+            left: 0 !important;
+            background: #fdfae7 !important;
+            min-width: 180px !important;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2) !important;
+            z-index: 99999 !important;
+            border: 1px solid #d0d0d0 !important;
+            border-radius: 4px !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            flex-direction: column !important;
+        }
+
+        .dropdown-content a {
+            display: block !important;
+            width: 100% !important;
+            padding: 9px 14px !important;
+            color: #444 !important;
+            text-decoration: none !important;
+            font-size: 12px !important;
+            font-weight: 500 !important;
+            text-transform: capitalize !important;
+            border-bottom: 1px solid #eee !important;
+            background: transparent !important;
+            box-sizing: border-box !important;
+            white-space: nowrap !important;
+            text-align: left !important;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none !important;
+        }
+
+        .dropdown-content a:hover {
+            background: #f0ead0 !important;
+            color: #b22222 !important;
+            padding-left: 18px !important;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: flex !important;
+            flex-direction: column !important;
+        }
+
+        .dropdown:nth-last-child(-n+4) .dropdown-content {
+            left: auto !important;
+            right: 0 !important;
+        }
+
+        .nav-search {
+            display: flex !important;
+            align-items: center !important;
+            margin-left: 5px !important;
+        }
+
+        .nav-search input {
+            width: 70px !important;
+            height: 24px !important;
+            padding: 2px 6px !important;
+            font-size: 10px !important;
+            border: 1px solid #ccc !important;
+            border-radius: 4px 0 0 4px !important;
+            outline: none !important;
+            box-sizing: border-box !important;
+        }
+
+        .nav-search button {
+            width: 24px !important;
+            height: 24px !important;
+            font-size: 11px !important;
+            border: none !important;
+            background: #eee !important;
+            border-radius: 0 4px 4px 0 !important;
+            cursor: pointer !important;
+            padding: 0 !important;
+        }
+
+        .nav-buttons {
+            display: flex !important;
+            gap: 5px !important;
+        }
+
+        .nav-buttons button {
+            padding: 5px 12px !important;
+            border-radius: 5px !important;
+            border: 1px solid #2563eb !important;
+            background: white !important;
+            color: #2563eb !important;
+            cursor: pointer !important;
+            font-size: 11px !important;
+            font-weight: 600 !important;
+        }
+
+        .nav-buttons .join-btn {
+            background: #2563eb !important;
+            color: white !important;
+        }
+
+
+        /* ================= MESSAGE PAGE CSS ================= */
+
+        .msg-wrapper {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 35px 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        .msg-wrapper h1 {
+            font-size: 30px;
+            color: #123f9c;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .msg-wrapper .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        .msg-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .msg-tabs button {
+            padding: 9px 20px;
+            border: 1px solid #2563eb;
+            background: white;
+            color: #2563eb;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .msg-tabs button.active,
+        .msg-tabs button:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        .contact-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 11px 14px;
+            background: #f8faff;
+            border: 1px solid #e0e7ff;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+
+        .contact-card:hover {
+            background: #eef4ff;
+            border-color: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .contact-card.selected {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+
+        .contact-card.selected .contact-info p {
+            color: #dbeafe;
+        }
+
+        .contact-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #2563eb;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .contact-card.selected .contact-avatar {
+            background: white;
+            color: #2563eb;
+        }
+
+        .contact-info h3 {
+            font-size: 13px;
+            margin: 0 0 2px;
+        }
+
+        .contact-info p {
+            font-size: 11px;
+            color: #666;
+            margin: 0;
+        }
+
+        .message-form {
+            background: #f8faff;
+            padding: 22px;
+            border-radius: 10px;
+            border: 1px solid #e0e7ff;
+        }
+
+        .message-form h2 {
+            font-size: 17px;
+            color: #123f9c;
+            margin-bottom: 12px;
+        }
+
+        .message-form label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+
+        .message-form input,
+        .message-form textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            outline: none;
+            font-size: 13px;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+
+        .message-form input:focus,
+        .message-form textarea:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .message-form textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .message-form button {
+            margin-top: 15px;
+            padding: 11px 26px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .message-form button:hover {
+            background: #1d4ed8;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        .success-msg {
+            display: none;
+            margin-top: 12px;
+            padding: 11px 14px;
+            background: #d1fae5;
+            color: #065f46;
+            border-radius: 7px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            .msg-wrapper {
+                margin: 20px 12px;
+                padding: 22px 18px;
+            }
+
+            .contact-list {
+                grid-template-columns: 1fr;
+            }
+
+            .msg-tabs button {
+                padding: 7px 12px;
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="college-brand">
+            <img src="/images/college.png.jpg"
+                 alt="College Logo"
+                 class="college-image">
+
+            <span class="college-name">
+                PRESTIGE COLLEGE
+            </span>
+        </div>
+
+
+        <nav class="main-nav">
+
+            <div class="nav-links">
+
+                <!-- ABOUT US -->
+
+                <div class="dropdown">
+
+                    <a href="/about" class="dropbtn">
+                        ABOUT US
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="/about">
+                            About Institute
+                        </a>
+
+                        <a href="/vision">
+                            Vision and Mission
+                        </a>
+
+                        <a href="/chairman">
+                            Chairman
+                        </a>
+
+                        <a href="/director">
+                            Director
+                        </a>
+
+                        <a href="/faculty">
+                            Faculty
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div class="dropdown">
+
+                    <a href="/message/student" class="dropbtn">
+                        MESSAGE
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="/message/alumni">
+                            Alumni
+                        </a>
+
+                        <a href="/message/student">
+                            Student
+                        </a>
+
+                        <a href="/message/other">
+                            Other
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACADEMICS -->
+
+                <div class="dropdown">
+
+                    <a href="/#academics" class="dropbtn">
+                        ACADEMICS
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="/#academics">
+                            Programs
+                        </a>
+
+                        <a href="/#academics">
+                            Departments
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div class="dropdown">
+
+                    <a href="/#contact" class="dropbtn">
+                        CONTACT US
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="/#contact">
+                            Enquiry
+                        </a>
+
+                        <a href="/#contact">
+                            Address
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH -->
+
+            <div class="nav-search">
+
+                <input
+                    type="text"
+                    id="navSearch"
+                    placeholder="Search..."
+                >
+
+                <button onclick="searchWebsite()">
+                    🔍
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <!-- LOGIN BUTTONS -->
+
+        <div class="nav-buttons">
+
+            <button onclick="openLogin()">
+                Login
+            </button>
+
+            <button
+                class="join-btn"
+                onclick="openRegister()"
+            >
+                Join Network
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= STUDENT MESSAGE PAGE ================= -->
+
+    <section class="msg-wrapper">
+
+        <h1>
+            Send a Message
+        </h1>
+
+        <p class="subtitle">
+            Connect with students, alumni, and faculty of Prestige College
+        </p>
+
+
+        <!-- TABS -->
+
+        <div class="msg-tabs">
+
+            <button
+                class="active"
+                onclick="filterContacts('student', this)"
+            >
+                Students
+            </button>
+
+            <button
+                onclick="filterContacts('alumni', this)"
+            >
+                Alumni
+            </button>
+
+            <button
+                onclick="filterContacts('faculty', this)"
+            >
+                Faculty
+            </button>
+
+        </div>
+
+
+        <!-- CONTACT LIST -->
+
+        <div class="contact-list" id="contactList">
+
+
+            <!-- STUDENT 1 -->
+
+            <div
+                class="contact-card"
+                data-type="student"
+                onclick="selectContact(
+                    'Rahul Sharma',
+                    'B.Tech CSE - 3rd Year',
+                    this
+                )"
+            >
+
+                <div class="contact-avatar">
+                    RS
+                </div>
+
+                <div class="contact-info">
+
+                    <h3>
+                        Rahul Sharma
+                    </h3>
+
+                    <p>
+                        B.Tech CSE - 3rd Year
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- STUDENT 2 -->
+
+            <div
+                class="contact-card"
+                data-type="student"
+                onclick="selectContact(
+                    'Priya Verma',
+                    'MBA - 1st Year',
+                    this
+                )"
+            >
+
+                <div class="contact-avatar">
+                    PV
+                </div>
+
+                <div class="contact-info">
+
+                    <h3>
+                        Priya Verma
+                    </h3>
+
+                    <p>
+                        MBA - 1st Year
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- STUDENT 3 -->
+
+            <div
+                class="contact-card"
+                data-type="student"
+                onclick="selectContact(
+                    'Arjun Mehta',
+                    'BBA - 2nd Year',
+                    this
+                )"
+            >
+
+                <div class="contact-avatar">
+                    AM
+                </div>
+
+                <div class="contact-info">
+
+                    <h3>
+                        Arjun Mehta
+                    </h3>
+
+                    <p>
+                        BBA - 2nd Year
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- STUDENT 4 -->
+
+            <div
+                class="contact-card"
+                data-type="student"
+                onclick="selectContact(
+                    'Sneha Patel',
+                    'B.Com - 3rd Year',
+                    this
+                )"
+            >
+
+                <div class="contact-avatar">
+                    SP
+                </div>
+
+                <div class="contact-info">
+
+                    <h3>
+                        Sneha Patel
+                    </h3>
+
+                    <p>
+                        B.Com - 3rd Year
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ALUMNI 1 -->
+
+            <div
+                class="contact-card"
+                data-type="alumni"
+                style="display:none;"
+                onclick="selectContact(
+                    'Raja Kumar',
+                    'Web Developer',
+                    this
+                )"
+            >
+
+                <div class="contact-avatar">
+                    RK
+                </div>
+
+                <div class="contact-info">
+
+                    <h3>
+                        Raja Kumar
+                    </h3>
+
+                    <p>
+                        Web Developer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ALUMNI 2 -->
+
+            <div
+                class="contact-card"
+                data-type="alumni"
+                style="display:none;"
+                onclick="selectContact(
+                    'Manish Gupta',
+                    'Software Engineer',
+                    this
+                )"
+            >
+
+                <div class="contact-avatar">
+                    MG
+                </div>
+
+                <div class="contact-info">
+
+                    <h3>
+                        Manish Gupta
+                    </h3>
+
+                    <p>
+                        Software Engineer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FACULTY 1 -->
+
+            <div
+                class="contact-card"
+                data-type="faculty"
+                style="display:none;"
+                onclick="selectContact(
+                    'Dr. A. K. Singh',
+                    'Professor - Management',
+                    this
+                )"
+            >
+
+                <div class="contact-avatar">
+                    AK
+                </div>
+
+                <div class="contact-info">
+
+                    <h3>
+                        Dr. A. K. Singh
+                    </h3>
+
+                    <p>
+                        Professor - Management
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FACULTY 2 -->
+
+            <div
+                class="contact-card"
+                data-type="faculty"
+                style="display:none;"
+                onclick="selectContact(
+                    'Prof. Meera Joshi',
+                    'HOD - Computer Science',
+                    this
+                )"
+            >
+
+                <div class="contact-avatar">
+                    MJ
+                </div>
+
+                <div class="contact-info">
+
+                    <h3>
+                        Prof. Meera Joshi
+                    </h3>
+
+                    <p>
+                        HOD - Computer Science
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MESSAGE FORM -->
+
+        <div class="message-form">
+
+            <h2>
+                Write Your Message
+            </h2>
+
+            <form
+                id="msgForm"
+                onsubmit="sendMessage(event)"
+            >
+
+                <label>
+                    To:
+                </label>
+
+                <input
+                    type="text"
+                    id="toField"
+                    placeholder="Select a contact above"
+                    readonly
+                    required
+                >
+
+
+                <label>
+                    Subject:
+                </label>
+
+                <input
+                    type="text"
+                    id="subjectField"
+                    placeholder="Enter subject"
+                    required
+                >
+
+
+                <label>
+                    Message:
+                </label>
+
+                <textarea
+                    id="messageField"
+                    placeholder="Write your message here..."
+                    required
+                ></textarea>
+
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+
+                <div
+                    class="success-msg"
+                    id="successMsg"
+                >
+                    ✅ Your message has been sent successfully!
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        let selectedName = "";
+
+
+        function selectContact(name, role, element) {
+
+            selectedName = name;
+
+            document
+                .querySelectorAll('.contact-card')
+                .forEach(function (c) {
+
+                    c.classList.remove('selected');
+
+                });
+
+
+            element.classList.add('selected');
+
+
+            document.getElementById('toField').value =
+                name + " (" + role + ")";
+        }
+
+
+        function filterContacts(type, btn) {
+
+            document
+                .querySelectorAll('.msg-tabs button')
+                .forEach(function (b) {
+
+                    b.classList.remove('active');
+
+                });
+
+
+            btn.classList.add('active');
+
+
+            document
+                .querySelectorAll('.contact-card')
+                .forEach(function (card) {
+
+                    card.style.display =
+                        (card.dataset.type === type)
+                            ? 'flex'
+                            : 'none';
+
+                });
+
+
+            document
+                .querySelectorAll('.contact-card')
+                .forEach(function (c) {
+
+                    c.classList.remove('selected');
+
+                });
+
+
+            document.getElementById('toField').value = "";
+
+            selectedName = "";
+        }
+
+
+        function sendMessage(event) {
+
+            event.preventDefault();
+
+
+            if (!selectedName) {
+
+                alert("Please select a contact first!");
+
+                return;
+            }
+
+
+            document.getElementById('successMsg').style.display =
+                'block';
+
+
+            document.getElementById('msgForm').reset();
+
+
+            document
+                .querySelectorAll('.contact-card')
+                .forEach(function (c) {
+
+                    c.classList.remove('selected');
+
+                });
+
+
+            selectedName = "";
+
+
+            setTimeout(function () {
+
+                document.getElementById('successMsg').style.display =
+                    'none';
+
+            }, 3000);
+        }
+
+    </script>
+
+
+    <!-- COMMON PROJECT JAVASCRIPT -->
+
+    <script src="/js/script-new.js"></script>
+
+</body>
+
+</html>
